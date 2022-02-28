@@ -19,14 +19,21 @@
       <nav>
         <a class="animation-navLinkFade" href="#">Carlos Sabbah</a>
         <ul class="animation-navLIFade">
-          <li><a href="#landing-secondary">What i do</a></li>
+          <!-- No href was added because the scroll function is being handled in script.js -->
+          <li>
+            <a id="nav-what-i-do">What i do</a>
+          </li>
           /
-          <li><a href="#personal-creatives">Creative Projects</a></li>
+          <li>
+            <a id="nav-personal">Creative Projects</a>
+          </li>
           /
-          <li><a href="#webdev-projects">Web Dev projects</a></li>
+          <li>
+            <a id="nav-webdev">Web Dev projects</a>
+          </li>
           /
-          <li style="margin-right: 0">
-            <a href="#contact-form">Contact me</a>
+          <li id="nav-form" style="margin-right: 0">
+            <a>Contact me</a>
           </li>
         </ul>
       </nav>
@@ -97,12 +104,7 @@
           </video>
         </div>
         <div class="creatives2">
-          <img
-            style="margin-left: 0"
-            src="images/Creative Projects/Polls/Poll1.png"
-            alt=""
-          />
-          <video controls>
+          <video style="margin-left: 0" controls>
             <source
               src="images/Creative Projects/Dynamic Content/Dynamic1.mp4"
               type="video/mp4"
@@ -125,7 +127,7 @@
           </video>
           <video controls>
             <source
-              src="images/Creative Projects/Dynamic Polls/Poll1.mp4"
+              src="images/Creative Projects/Dynamic Polls/Poll3.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -144,6 +146,7 @@
             />
             Your browser does not support the video tag.
           </video>
+          <img src="images/Creative Projects/Polls/Poll1.png" alt="" />
           <img src="images/Creative Projects/Polls/Poll2.png" alt="" />
           <img src="images/Creative Projects/Polls/Poll3.png" alt="" />
           <img src="images/Creative Projects/Polls/Poll4.png" alt="" />

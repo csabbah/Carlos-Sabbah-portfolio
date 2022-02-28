@@ -59,6 +59,7 @@ header ul {
 
 header li {
   margin: 0 20px;
+  opacity: 0.8;
 }
 
 @keyframes navLinkFade {
@@ -79,7 +80,14 @@ header li {
 
 header a {
   color: inherit;
+  cursor: pointer;
   text-decoration: none;
+  opacity: 0.8;
+}
+
+header a:hover,
+nav li:hover {
+  opacity: 1;
 }
 /* --------------------------------------------- Landing page */
 
