@@ -60,12 +60,6 @@ window.addEventListener('scroll', () => {
     webDevProjects.classList.remove('active');
   }
 
-  if (scroll > 2150) {
-    reactApp.classList.add('active');
-  } else {
-    reactApp.classList.remove('active');
-  }
-
   // Color fading function
   if (scroll > 1600) {
     // Starting at position 1600, start executing the below lines of code
@@ -78,8 +72,19 @@ window.addEventListener('scroll', () => {
 });
 
 // ---------- Scroll To functions
-var element = document.getElementById('nav-what-i-do');
-element.addEventListener('click', () => {
+
+var element1 = document.getElementById('nav-carlos');
+const topSection = document.getElementById('top');
+element1.addEventListener('click', () => {
+  topSection.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+    inline: 'nearest',
+  });
+});
+
+var element2 = document.getElementById('nav-what-i-do');
+element2.addEventListener('click', () => {
   landingSecondary.scrollIntoView({
     behavior: 'smooth',
     block: 'center',
@@ -87,27 +92,18 @@ element.addEventListener('click', () => {
   });
 });
 
-var element2 = document.getElementById('nav-personal');
-element2.addEventListener('click', () => {
+var element3 = document.getElementById('nav-personal');
+element3.addEventListener('click', () => {
   personalCreatives.scrollIntoView({
     behavior: 'smooth',
-    block: 'center',
+    block: 'end',
     inline: 'nearest',
   });
 });
 
-var element3 = document.getElementById('nav-webdev');
-element3.addEventListener('click', () => {
-  webDevProjects.scrollIntoView({
-    behavior: 'smooth',
-    block: 'center',
-    inline: 'nearest',
-  });
-});
-
-var element4 = document.getElementById('nav-react');
+var element4 = document.getElementById('nav-webdev');
 element4.addEventListener('click', () => {
-  reactApp.scrollIntoView({
+  webDevProjects.scrollIntoView({
     behavior: 'smooth',
     block: 'center',
     inline: 'nearest',

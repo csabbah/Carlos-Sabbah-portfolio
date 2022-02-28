@@ -15,11 +15,13 @@
     <title>Portfolio</title>
   </head>
   <body>
+    <!-- Serves no purpose other than a target element to scroll to -->
+    <div id="top"></div>
     <header>
       <nav>
-        <a class="animation-navLinkFade" href="#">Carlos Sabbah</a>
+        <!-- No href was added for nav anchor tags because the scroll function is being handled in script.js -->
+        <a id="nav-carlos" class="animation-navLinkFade">Carlos Sabbah</a>
         <ul class="animation-navLIFade">
-          <!-- No href was added because the scroll function is being handled in script.js -->
           <li>
             <a id="nav-what-i-do">What i do</a>
           </li>
@@ -30,10 +32,6 @@
           <p>/</p>
           <li>
             <a id="nav-webdev">Web Dev projects</a>
-          </li>
-          <p>/</p>
-          <li id="nav-react">
-            <a>React App</a>
           </li>
           <p>/</p>
           <li id="nav-form" style="margin-right: 0">
@@ -55,7 +53,29 @@
             I'm an aspiring frontend developer with over 7 years of experience
             in marketing and content creation. I have unique eye for creativity,
             love to solve crticial problems and a keen to always improve and
-            learn more.
+            learn more. <br />
+            <span>
+              <span>
+                <img src="images/Github-icon.png" alt="" />
+                <a
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href="https://github.com/csabbah"
+                >
+                  My Github
+                </a>
+              </span>
+              <span style="margin-left: 20px">
+                <img src="images/React-icon.svg.png" alt="" />
+                <a
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href="https://carlossabbah.com/"
+                >
+                  My React App
+                </a>
+              </span>
+            </span>
           </p>
           <div class="scroll-main animation-fadedown">
             <p class="scroll">Scroll</p>
@@ -74,13 +94,13 @@
           <h3>Frontend Development, Top Tier Influencer & Content Creator</h3>
         </div>
         <div class="secondary-intro-body">
-          <h5>
+          <p>
             Certified in advanced Python (Django, Automation, web scraping and
             Data analysis), HTML, CSS, JavaScript (Working with API, jQuery,
             React.js, Bootstrap/Daisyui and Tailwind) and in all major adobe
             programs including, Premiere, After effects, Illustrator, Photoshop
             and XD.
-          </h5>
+          </p>
         </div>
       </article>
     </section>
@@ -220,13 +240,6 @@
       </div>
     </section>
 
-    <section id="react-app">
-      <div class="react-container">
-        <h1 id="brand-title">MY REACT APPLICATION</h1>
-        <div class="webdev-projs"></div>
-      </div>
-    </section>
-
     <section id="contact-form">
       <form>
         <h1>Let's talk!</h1>
@@ -235,8 +248,8 @@
           <input class="email" type="email" placeholder="E-mail*" />
           <input class="subject" type="text" placeholder="Subject*" />
           <textarea name="" id="" placeholder="Message*"></textarea>
-          <button>Confirm</button>
         </div>
+        <button>Confirm</button>
       </form>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

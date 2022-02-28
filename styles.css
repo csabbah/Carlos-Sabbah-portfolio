@@ -1,19 +1,26 @@
-/* --------------------------------------------- Root / Default elements */
+/* --------------------------------- Root / Default elements */
+/* I use the below variable for all the main container section transitions */
 :root {
   --var-container-transition: 1s all cubic-bezier(0.44, -0.15, 0.56, 1.07);
 }
+
+/* For the root element, set margin and padding to 0 and use the 'Poppins' font */
 * {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
 
+/* Here i establish an initial background color for the body */
 body {
   background-color: black;
 }
 
-/* --------------------------------------------- Header */
+/* --------------------------------- Header */
 
+/* This stylizes the header and gives it sticky position, additionally, 
+i center everything accordingly, set a specific height and include a
+smooth gradient from black to transparent */
 header {
   position: sticky;
   top: 0;
@@ -25,26 +32,52 @@ header {
   background: linear-gradient(rgba(0, 0, 0, 0.9), transparent);
 }
 
+/* For every anchor tag in the header section, add cursor pointer and a very slight
+decrease in opacity */
+header a {
+  height: 25px;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+/* Upon hover over each anchor tag, increase the opacity*/
+header a:hover {
+  opacity: 1;
+}
+/* Remove the bullet points for from the unordered list */
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+/* For each nav link item, lower the opacity slightly and add some margin across the x axis */
+header li {
+  margin: 0 15px;
+  opacity: 0.9;
+}
+
+/* The first inner container of header, here, i spread out the 2 containers i use
+from edge to edge, one is 'Carlos Sabbah' and the other are the nav link items  */
 nav {
   margin-top: 20px;
   width: 1200px;
   display: flex;
   justify-content: space-between;
 }
+
+/* The first anchor in the nav section, remove the ability to highlight the text
+and make the cursor pointer. */
 nav a {
   user-select: none;
   cursor: pointer;
 }
 
+/* Lower the opacity for the nav link item dividers i.e. '/' */
 nav p {
   opacity: 0.2;
 }
 
-header ul {
-  display: flex;
-  list-style: none;
-}
-
+/* Upon application load, exeute this animation for the nav link items*/
 @keyframes navLIFade {
   0% {
     opacity: 0;
@@ -56,16 +89,13 @@ header ul {
     transform: translateX(0px);
   }
 }
+
 .animation-navLIFade {
   animation-name: navLIFade;
   animation-duration: 2.5s;
 }
 
-header li {
-  margin: 0 15px;
-  opacity: 0.9;
-}
-
+/* Upon application load, exeute this animation for the anchor tag ('Carlos Sabbah') */
 @keyframes navLinkFade {
   0% {
     opacity: 0;
@@ -77,37 +107,29 @@ header li {
     transform: translateX(0px);
   }
 }
+
 .animation-navLinkFade {
   animation-name: navLinkFade;
   animation-duration: 2.5s;
 }
 
-header a {
-  color: inherit;
-  cursor: pointer;
-  text-decoration: none;
-  opacity: 0.9;
-}
+/* --------------------------------- Landing page */
 
-header a:hover,
-nav li:hover {
-  opacity: 1;
-}
-/* --------------------------------------------- Landing page */
-
+/* The inactive state properties to the MAIN parent container */
 #landing {
   opacity: 0;
   display: flex;
   justify-content: center;
   transform: translateY(50px);
 }
-
+/* The active state properties */
 #landing.active {
   opacity: 1;
   transform: translateY(0);
   transition: 1s all ease-in-out;
 }
 
+/* This stylizes the main inner container to the landing parent container*/
 .landing-container {
   color: white;
   display: flex;
@@ -118,8 +140,17 @@ nav li:hover {
   padding-right: 40px;
 }
 
+/* Stylizes the main header of the website, 'Carlos."*/
+.landing-container h1 {
+  font-size: 100px;
+  font-weight: 900;
+  transition: 0.2s all ease-in-out;
+  cursor: default;
+  transition: 0.1s color ease-in-out;
+}
+
+/* Stylizes the secondary title of the hedaer, 'Hi, it's me" */
 .landing-container h3 {
-  /* Hi, it's me */
   top: 30px;
   left: 10px;
   position: relative;
@@ -128,15 +159,13 @@ nav li:hover {
   cursor: default;
 }
 
-.landing-container h1 {
-  /* Carlos */
-  font-size: 100px;
-  font-weight: 900;
-  transition: 0.2s all ease-in-out;
-  cursor: default;
-  transition: 0.1s color ease-in-out;
+/* I reduce the opacity for the landing page main element,
+this makes it looks more subtle and classy */
+.landing-body {
+  opacity: 0.6;
 }
 
+/* This sylizes the body paragraph text for the landing page section */
 .intro-section p {
   width: 535px;
   font-weight: 200;
@@ -147,6 +176,7 @@ nav li:hover {
   cursor: default;
 }
 
+/* For each letter in my name ("Carlos"), give it a unique hover color */
 .intro-section em:nth-child(1):hover {
   color: red;
   transition: 0.1s color ease-in-out;
@@ -181,10 +211,9 @@ nav li:hover {
   color: rgb(238, 255, 0);
   transition: 0.1s color ease-in-out;
 }
-.landing-body {
-  opacity: 0.6;
-}
 
+/* Here i create the key frame to simulate a smooth fade in, followed by 
+a slight positon change and then fade out */
 @keyframes fadeDown {
   0% {
     opacity: 0;
@@ -203,19 +232,23 @@ nav li:hover {
     transform: translateY(5px);
   }
 }
+
+/* This animation is for the 'Scroll' element, it takes effect after 2 seconds on application
+load and it repeats 20 times and or will pause if the user scrlls down.  */
 .animation-fadedown {
   animation-name: fadeDown;
   animation-delay: 2s;
   animation-duration: 2s;
   animation-iteration-count: 20;
 }
-
+/* The main container for the scroll elements (HR and "Scroll text") */
 .scroll-main {
   transform: translateY(0);
   opacity: 0;
   transition: 2s all cubic-bezier(0.44, -0.15, 0.56, 1.07);
 }
 
+/* This stylizes the 'Scroll' text itself*/
 .scroll {
   font-weight: 200;
   letter-spacing: 2px;
@@ -223,27 +256,55 @@ nav li:hover {
   margin-top: 60px;
 }
 
+/* This stylizes the line 'Scroll' */
 hr {
   border: 0.5px solid red;
   width: 100px;
 }
 
-.portrait {
-  height: 100%;
-}
-
+/* This is for the portrait image, i push it slightly to the right so there's 
+more consitency in the container apperaence */
 .portrait img {
   width: 450px;
-  transform: translateX(px);
+  transform: translateX(10px);
 }
+
+/* The introductory bio */
 .intro-section {
   display: flex;
   flex-direction: column;
   margin-top: 100px;
 }
 
-/* ---------------------------- Landing page secondary */
+/* The main container for the 'Github" and "My React App" elements under the bio */
+.intro-section span {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 300;
+  position: relative;
+  top: 10px;
+}
 
+/* This resizes the logos for each link item and inverts them from black to white */
+.intro-section span img {
+  width: 30px;
+  filter: brightness(0) invert(1);
+}
+
+/* This stylizes the anchor tags. I remove the original underline and use border-bottom 
+instead as it is cleaner and matches the overall style of the website. */
+.intro-section a {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  margin-left: 5px;
+  letter-spacing: 1.1px;
+  color: white;
+}
+
+/* --------------------------------- Landing page secondary */
+
+/* This is the initial (inactive state) properties set for the parent container of the 2nd introductory. */
 #landing-secondary {
   opacity: 0;
   display: flex;
@@ -259,31 +320,30 @@ hr {
   padding-right: 40px;
 }
 
+/* This is the active state */
 #landing-secondary.active {
   transform: translateY(-50px);
   transition: 2s all cubic-bezier(0.44, -0.15, 0.56, 1.07);
   opacity: 1;
 }
 
+/* Since there are 2 containers in this one section, i specify a width
+and i use space-between to push each container evenly to each edge */
 .secondary-inner-container {
   display: flex;
   justify-content: space-between;
   width: 1200px;
 }
 
-.secondary-intro-section p {
-  color: red;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
+/* This is the left container header text (i.e. "Frontend Development, Top tier influencer, etc") */
 .secondary-intro-section h3 {
   font-size: 39px;
   width: 475px;
   margin-top: 16px;
 }
 
-.secondary-intro-body h5 {
+/* This is the right container body text */
+.secondary-intro-body p {
   width: 600px;
   font-weight: 200;
   text-align: justify;
@@ -292,9 +352,9 @@ hr {
   margin-top: 15px;
 }
 
-/* ---------------------------- Creative, Webdev and React main properties */
+/* --------------------------------- Creative, Webdev and React main properties */
 
-/* Main container (inactive) */
+/* Main parent container for each section, initial properties (inactive state) */
 #personal-creatives,
 #webdev-projects,
 #react-app {
@@ -305,6 +365,17 @@ hr {
   transition: var(--var-container-transition);
 }
 
+/* Main parent containers (active state) 
+Subtle transition across the Y axis along with increase to 100% in opacity */
+#personal-creatives.active,
+#webdev-projects.active,
+#react-app.active {
+  transform: translateY(-50px);
+  transition: var(--var-container-transition);
+  opacity: 1;
+}
+
+/* Main header for each section (i.e. "Some of the creative projects i worked on") */
 .creative-container h1,
 .webdev-container h1,
 .react-container h1 {
@@ -316,19 +387,7 @@ hr {
   color: white;
 }
 
-.react-container h1 {
-  color: black;
-  font-size: 99.5px;
-}
-
-#personal-creatives.active,
-#webdev-projects.active,
-#react-app.active {
-  transform: translateY(-50px);
-  transition: var(--var-container-transition);
-  opacity: 1;
-}
-/* ---------------------------- Creative Section */
+/* --------------------------------- Creative Section */
 
 /* Main container (active) */
 #personal-creatives a {
@@ -346,13 +405,15 @@ hr {
   align-items: center;
 }
 
-/* First row creatives (1st set of creatives) */
+/* First row creatives (1st set of images) */
 .creatives1 {
   width: 1220px;
   display: flex;
   overflow-x: scroll;
 }
 
+/* I stylize the image and video content pieces and ensure the content fits
+(object-fit: cover) accordingly despite the custom ratio i use */
 .creatives1 img,
 .creatives1 video {
   width: 550px;
@@ -361,10 +422,13 @@ hr {
   object-fit: cover;
 }
 
+/* Naturally, i add cursor pointer for the videos */
 .creatives1 video {
   cursor: pointer;
 }
 
+/* The banner images need to be put in a container as they are
+much longer in width so they need to occupy the space accordingly */
 .banners {
   display: flex;
 }
@@ -374,132 +438,133 @@ hr {
   object-fit: cover;
 }
 
-/* Second row creatives (2nd set of creatives) */
+/* Second row creatives (2nd set of images) */
 .creatives2 {
   width: 1220px;
   display: flex;
   overflow-x: scroll;
 }
+
+/* Stylizes the story images/videos, originally the content pieces 
+are much smaller in width so i can fit more content in one line */
 .creatives2 img,
 .creatives2 video {
-  width: 100px;
+  width: 75px;
   height: 350px;
   margin: 5px 5px;
+  filter: saturate(0.65);
   object-fit: cover;
-  transition: 0.3s all ease-in-out;
+  transition: 0.6s all ease-in-out;
 }
 
+/* Upon hovering over each piece, it extends & reveals the full content */
 .creatives2 img:hover,
 .creatives2 video:hover {
-  width: 300px;
-  transition: 0.3s all ease-in-out;
+  width: 200px;
+  filter: saturate(1);
+  transition: 0.6s all ease-in-out;
 }
+/* Naturally, i add cursor pointer for the videos */
 .creatives2 video {
   cursor: pointer;
 }
 
-/* ---------------------------- Webdev Section */
+/* --------------------------------- Webdev Section */
+/* I remove the underline for each anchor tag in the Webdev section
+as it disrupts the container visually and is not needed */
 .webdev-projs a {
   text-decoration: none;
 }
-.webdev-projs img,
-.webdev-projs video {
+/* These stylize the size of the preview images for each website */
+.webdev-projs img {
   cursor: pointer;
   margin: 5px 9px;
   width: 225px;
   height: 225px;
+  /* I add a transition here so when you move away from the preview, it returns to 
+  it's initial state 'smoothly' */
   transition: 0.1s all ease-in-out;
 }
 
-.webdev-projs img:hover,
-.webdev-projs video:hover {
+/* Upon hovering over a preview image, increase the scale by a small factor */
+.webdev-projs img:hover {
   transform: scale(1.1);
   transition: 0.1s all ease-in-out;
 }
 
-/* ---------------------------- React Portfolio */
+/* --------------------------------- Contact Form */
 
-/* ---------------------------- Contact Form */
-
+/* This stylizes the contact form at the bottom of the page, i ensure everything INSIDE
+the main container is centered vertically and horizontally*/
 #contact-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  height: 651px;
-  margin-top: 100px;
-}
-
+/* Stylizes the header text above the form */
 form h1 {
+  font-weight: 400;
   font-style: italic;
 }
 
-form p {
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
+/* Here i use a grid layout to build out a specific structure 
+for each input field.*/
 .form-inner-container {
   margin-top: 30px;
   display: grid;
-  grid-template: 38px 38px 110px / 380px 480px;
+  grid-template: 38px 38px 110px / 275px 480px;
   column-gap: 20px;
   row-gap: 20px;
 }
 
+/* Stretch the subject field across the entire grid column so 
+everything fits nicely as well as looks cleaner */
 .subject {
   grid-column: 1/3;
 }
 
+/* Specifically for the message input, give it a larger height so 
+that the user can type more */
 .message {
-  grid-row: 3/5;
-  grid-column: 1/3;
   height: 150px;
 }
 
-.form-inner-container button {
-  grid-row: 5/6;
+/* Stylizes the form 'submit' button */
+form button {
   width: 175px;
   height: 50px;
   border: none;
   cursor: pointer;
+  margin-top: 20px;
+  background-color: rgba(227, 227, 227, 0.7);
 }
 
-.form-inner-container input,
-.form-inner-container textarea {
+/* Reduce the opacity of the placeholder of the input and textarea so it
+looks cleaner visually */
+.form-inner-container input::placeholder,
+.form-inner-container textarea::placeholder {
+  opacity: 0.7;
+}
+
+/* Pushes the text (that the user types in the form fields) to the right,
+adds a special backround color and remove the borders */
+.form-inner-container input[type='text'],
+.form-inner-container textarea,
+.form-inner-container input[type='email'] {
+  padding-left: 20px;
+  background-color: rgba(227, 227, 227, 0.7);
   border: none;
 }
 
-.form-inner-container input::placeholder,
-.form-inner-container textarea::placeholder {
-  opacity: 0.6;
-}
-
-.form-inner-container input[type='text'],
-.form-inner-container textarea {
-  padding-left: 20px;
-  background-color: rgb(233, 233, 233);
-}
-
+/* Same idea as above but for the textarea, push the text more down so it looks 
+more consistency with the style of the form
+Additionally, take up the full column of the form field grid */
 .form-inner-container textarea {
   padding-top: 10px;
   grid-column: 1/3;
   resize: none;
-}
-
-.form-inner-container input[type='text'].message,
-.form-inner-container textarea {
-  position: relative;
-  top: 0;
-  background-color: rgb(233, 233, 233);
-}
-
-.form-inner-container input[type='email'] {
-  padding-left: 20px;
-  background-color: rgb(233, 233, 233);
+  /* Remove the resize option for the textarea so it does not disrupt the form visually */
 }
