@@ -1,6 +1,10 @@
 const rootElement = document.documentElement;
 const root = document.querySelector('body');
 
+const scrollMain = document.querySelector('.scroll-main');
+const scrollText = document.querySelector('.scroll');
+const scrollHr = document.querySelector('.intro-line');
+
 const brandTitle = document.getElementById('brand-title');
 const header = document.querySelector('header');
 
@@ -24,7 +28,7 @@ $(document).ready(function () {
 });
 
 // ---------- Scroll conditionals
-window.addEventListener('scroll', (e) => {
+window.addEventListener('scroll', () => {
   const scroll = Math.ceil(this.scrollY);
   if (scroll < 1420) {
     root.style.backgroundColor = `rgb(0, 0, 0`;
@@ -36,6 +40,12 @@ window.addEventListener('scroll', (e) => {
   } else {
     // If you go under the condition, remove the class (aka, disappear)
     landingSecondary.classList.remove('active');
+  }
+
+  if (scroll > 600) {
+    scrollMain.style.animationPlayState = 'paused'; // Pause the "Scroll" Animation
+    scrollHr.style.opacity = '0'; // Then hide the elements
+    scrollText.style.opacity = '0';
   }
 
   if (scroll > 800) {
