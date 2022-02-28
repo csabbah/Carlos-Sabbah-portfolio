@@ -22,7 +22,7 @@ header {
   display: flex;
   justify-content: center;
   height: 100px;
-  background: linear-gradient(to bottom, black, transparent);
+  background: linear-gradient(rgba(0, 0, 0, 0.9), transparent);
 }
 
 nav {
@@ -62,7 +62,7 @@ header ul {
 }
 
 header li {
-  margin: 0 20px;
+  margin: 0 15px;
   opacity: 0.9;
 }
 
@@ -350,7 +350,6 @@ hr {
 .creatives1 {
   width: 1220px;
   display: flex;
-  flex-wrap: nowrap;
   overflow-x: scroll;
 }
 
@@ -406,9 +405,9 @@ hr {
 .webdev-projs img,
 .webdev-projs video {
   cursor: pointer;
-  margin: 15px 10px;
-  width: 220px;
-  height: 220px;
+  margin: 5px 9px;
+  width: 225px;
+  height: 225px;
   transition: 0.1s all ease-in-out;
 }
 
