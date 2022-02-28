@@ -1,14 +1,17 @@
 const rootElement = document.documentElement;
 const root = document.querySelector('body');
 
-const mainLanding = document.getElementById('landing');
-const landingSecondary = document.getElementById('landing-secondary');
-const personalCreatives = document.getElementById('personal-creatives');
-const webDevProjects = document.getElementById('webdev-projects');
-const contactForm = document.getElementById('contact-form');
-
 const brandTitle = document.getElementById('brand-title');
 const header = document.querySelector('header');
+
+const mainLanding = document.getElementById('landing');
+const landingSecondary = document.getElementById('landing-secondary');
+
+const personalCreatives = document.getElementById('personal-creatives');
+const webDevProjects = document.getElementById('webdev-projects');
+const reactApp = document.getElementById('react-app');
+
+const contactForm = document.getElementById('contact-form');
 
 // On page load (or when you hit refresh), scroll to the very top
 $(document).ready(function () {
@@ -20,9 +23,13 @@ $(document).ready(function () {
   }, 100);
 });
 
-// ---- Scroll conditional
+// ---------- Scroll conditionals
 window.addEventListener('scroll', (e) => {
   const scroll = Math.ceil(this.scrollY);
+  if (scroll < 1420) {
+    root.style.backgroundColor = `rgb(0, 0, 0`;
+  }
+
   if (scroll > 150) {
     // Once you exceed 150, add the class of active to the landing page
     landingSecondary.classList.add('active'); // Active = Opacity 100%
@@ -31,26 +38,25 @@ window.addEventListener('scroll', (e) => {
     landingSecondary.classList.remove('active');
   }
 
-  if (scroll < 1420) {
-    root.style.backgroundColor = `rgb(0, 0, 0`;
-  }
-
   if (scroll > 800) {
-    // Once you exceed 150, add the class of active to the landing page
-    personalCreatives.classList.add('active'); // Active = Opacity 100%
+    personalCreatives.classList.add('active');
   } else {
-    // If you go under the condition, remove the class (aka, disappear)
     personalCreatives.classList.remove('active');
   }
 
-  if (scroll > 1450) {
-    // Once you exceed 150, add the class of active to the landing page
-    webDevProjects.classList.add('active'); // Active = Opacity 100%
+  if (scroll > 1500) {
+    webDevProjects.classList.add('active');
   } else {
-    // If you go under the condition, remove the class (aka, disappear)
     webDevProjects.classList.remove('active');
   }
 
+  if (scroll > 2150) {
+    reactApp.classList.add('active');
+  } else {
+    reactApp.classList.remove('active');
+  }
+
+  // Color fading function
   if (scroll > 1600) {
     // Starting at position 1600, start executing the below lines of code
     let y = 0 + (scroll - 1600) / 2; // The og background color is black (0), so we start at 0 and incremenet
@@ -61,7 +67,7 @@ window.addEventListener('scroll', (e) => {
   }
 });
 
-/* Scroll To */
+// ---------- Scroll To functions
 var element = document.getElementById('nav-what-i-do');
 element.addEventListener('click', () => {
   landingSecondary.scrollIntoView({
@@ -75,7 +81,7 @@ var element2 = document.getElementById('nav-personal');
 element2.addEventListener('click', () => {
   personalCreatives.scrollIntoView({
     behavior: 'smooth',
-    block: 'end',
+    block: 'center',
     inline: 'nearest',
   });
 });
@@ -89,8 +95,17 @@ element3.addEventListener('click', () => {
   });
 });
 
-var element4 = document.getElementById('nav-form');
+var element4 = document.getElementById('nav-react');
 element4.addEventListener('click', () => {
+  reactApp.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+    inline: 'nearest',
+  });
+});
+
+var element5 = document.getElementById('nav-form');
+element5.addEventListener('click', () => {
   contactForm.scrollIntoView({
     behavior: 'smooth',
     block: 'center',

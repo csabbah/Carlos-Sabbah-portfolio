@@ -31,9 +31,13 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-nav p {
+nav a {
   user-select: none;
   cursor: pointer;
+}
+
+nav p {
+  opacity: 0.2;
 }
 
 header ul {
@@ -54,12 +58,12 @@ header ul {
 }
 .animation-navLIFade {
   animation-name: navLIFade;
-  animation-duration: 3s;
+  animation-duration: 2.5s;
 }
 
 header li {
   margin: 0 20px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 @keyframes navLinkFade {
@@ -75,14 +79,14 @@ header li {
 }
 .animation-navLinkFade {
   animation-name: navLinkFade;
-  animation-duration: 3s;
+  animation-duration: 2.5s;
 }
 
 header a {
   color: inherit;
   cursor: pointer;
   text-decoration: none;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 header a:hover,
@@ -110,8 +114,8 @@ nav li:hover {
   justify-content: space-between;
   margin-top: 30px;
   width: 1200px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .landing-container h3 {
@@ -203,7 +207,7 @@ nav li:hover {
   animation-name: fadeDown;
   animation-delay: 2s;
   animation-duration: 2s;
-  animation-iteration-count: 10;
+  animation-iteration-count: 20;
 }
 
 .scroll-main {
@@ -251,8 +255,8 @@ hr {
   cursor: default;
   transform: translateY(50px);
   transition: var(--var-container-transition);
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 #landing-secondary.active {
@@ -288,8 +292,12 @@ hr {
   margin-top: 15px;
 }
 
-/* ---------------------------- Creative Section */
-#personal-creatives {
+/* ---------------------------- Creative, Webdev and React main properties */
+
+/* Main container (inactive) */
+#personal-creatives,
+#webdev-projects,
+#react-app {
   margin: 0 auto;
   width: 1300px;
   margin-bottom: 200px;
@@ -297,25 +305,9 @@ hr {
   transition: var(--var-container-transition);
 }
 
-#personal-creatives.active {
-  transform: translateY(-50px);
-  transition: var(--var-container-transition);
-  opacity: 1;
-}
-
-#personal-creatives a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.personal-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.personal-container h1 {
+.creative-container h1,
+.webdev-container h1,
+.react-container h1 {
   margin-left: 36px;
   margin-bottom: 10px;
   font-weight: 800;
@@ -324,6 +316,37 @@ hr {
   color: white;
 }
 
+.react-container h1 {
+  color: black;
+  font-size: 99.5px;
+}
+
+#personal-creatives.active,
+#webdev-projects.active,
+#react-app.active {
+  transform: translateY(-50px);
+  transition: var(--var-container-transition);
+  opacity: 1;
+}
+/* ---------------------------- Creative Section */
+
+/* Main container (active) */
+#personal-creatives a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Inner container 
+(Included Webdev properties here to conslidate selectors) */
+.creative-container,
+.webdev-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* First row creatives (1st set of creatives) */
 .creatives1 {
   width: 1220px;
   display: flex;
@@ -333,7 +356,7 @@ hr {
 
 .creatives1 img,
 .creatives1 video {
-  width: 400px;
+  width: 550px;
   height: 240px;
   margin: 5px 5px;
   object-fit: cover;
@@ -342,6 +365,7 @@ hr {
 .creatives1 video {
   cursor: pointer;
 }
+
 .banners {
   display: flex;
 }
@@ -351,6 +375,7 @@ hr {
   object-fit: cover;
 }
 
+/* Second row creatives (2nd set of creatives) */
 .creatives2 {
   width: 1220px;
   display: flex;
@@ -358,30 +383,42 @@ hr {
 }
 .creatives2 img,
 .creatives2 video {
-  width: 300px;
-  height: 400px;
+  width: 100px;
+  height: 350px;
   margin: 5px 5px;
   object-fit: cover;
+  transition: 0.3s all ease-in-out;
 }
 
+.creatives2 img:hover,
+.creatives2 video:hover {
+  width: 300px;
+  transition: 0.3s all ease-in-out;
+}
 .creatives2 video {
   cursor: pointer;
 }
 
-/* ---------------------------- Brand Section */
-#webdev-projects {
-  margin: 0 auto;
-  width: 1300px;
-  margin-bottom: 100px;
-  opacity: 0;
-  transition: var(--var-container-transition);
+/* ---------------------------- Webdev Section */
+.webdev-projs a {
+  text-decoration: none;
+}
+.webdev-projs img,
+.webdev-projs video {
+  cursor: pointer;
+  margin: 15px 10px;
+  width: 220px;
+  height: 220px;
+  transition: 0.1s all ease-in-out;
 }
 
-#webdev-projects.active {
-  transform: translateY(-50px);
-  transition: var(--var-container-transition);
-  opacity: 1;
+.webdev-projs img:hover,
+.webdev-projs video:hover {
+  transform: scale(1.1);
+  transition: 0.1s all ease-in-out;
 }
+
+/* ---------------------------- React Portfolio */
 
 /* ---------------------------- Contact Form */
 
