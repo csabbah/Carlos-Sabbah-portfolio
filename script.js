@@ -50,7 +50,7 @@ window.addEventListener('scroll', () => {
     scrollText.style.opacity = '0';
   }
 
-  if (scroll > 800) {
+  if (scroll > 700) {
     personalCreatives.classList.add('active');
   } else {
     personalCreatives.classList.remove('active');
@@ -63,10 +63,10 @@ window.addEventListener('scroll', () => {
   }
 
   // Color fading function
-  if (scroll > 1600) {
+  if (scroll > 1400) {
     // Starting at position 1600, start executing the below lines of code
-    let y = 0 + (scroll - 1600) / 2; // The og background color is black (0), so we start at 0 and incremenet
-    let x = 255 - (scroll - 1600) / 2; // The og is white so we start at 255 and decrement
+    let y = 0 + (scroll - 1400) / 2; // The og background color is black (0), so we start at 0 and incremenet
+    let x = 255 - (scroll - 1400) / 2; // The og is white so we start at 255 and decrement
 
     root.style.backgroundColor = `rgb(${y}, ${y}, ${y})`;
     brandTitle.style.color = `rgb(${x}, ${x}, ${x})`;

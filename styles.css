@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'PoppinsHeader';
+  src: url('./Poppins/Poppins-Bold.ttf');
+}
+@font-face {
+  font-family: 'PoppinsBody';
+  src: url('./Poppins/Poppins-Medium.ttf');
+}
+
 /* --------------------------------------------- Root / Default elements */
 /* I use the below variable for all the main container section transitions */
 :root {
@@ -8,12 +17,25 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
 }
 
 /* Here i establish an initial background color for the body */
 body {
   background-color: black;
+}
+
+h1 {
+  font-family: 'PoppinsHeader', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+a,
+p {
+  font-family: 'PoppinsBody';
 }
 
 /* --------------------------------------------- Header */
@@ -53,6 +75,7 @@ header a:hover {
 /* Remove the bullet points for from the unordered list */
 header ul {
   display: flex;
+  align-items: center;
   list-style: none;
 }
 
@@ -74,6 +97,7 @@ nav {
 /* The first anchor in the nav section, remove the ability to highlight the text
 and make the cursor pointer. */
 nav a {
+  font-size: 24px;
   cursor: pointer;
   user-select: none;
 }
@@ -124,11 +148,11 @@ nav p {
     width: 1086px;
   }
   nav a {
-    font-size: 19px;
+    font-size: 22px;
   }
 
   header li {
-    margin: 0 15px;
+    margin: 2px 15px;
   }
   #nav-stack {
     display: none;
@@ -141,11 +165,11 @@ nav p {
   }
 
   nav a {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   header li {
-    margin: 0 10px;
+    margin: 3px 10px;
   }
   #nav-stack {
     display: none;
@@ -162,11 +186,11 @@ nav p {
   }
 
   nav a {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   header li {
-    margin: 0 6px;
+    margin: 10px 9px;
   }
   #nav-stack {
     display: none;
@@ -174,6 +198,7 @@ nav p {
 }
 
 @media (max-width: 750px) {
+  /* The below properties build out the nav menu for mobile screens */
   #landing {
     height: 630px;
     padding-top: 70px;
@@ -194,7 +219,7 @@ nav p {
 
   nav.active {
     opacity: 1;
-    transition: 1s all ease-in-out;
+    transition: 0.7s all ease-in-out;
   }
 
   nav a {
@@ -298,7 +323,7 @@ nav p {
   font-weight: 800;
   left: 10px;
   position: relative;
-  top: 30px;
+  top: 25px;
 }
 
 /* I reduce the opacity for the landing page main element,
@@ -503,6 +528,7 @@ instead as it is cleaner and matches the overall style of the website. */
     width: 700px;
     padding-left: 0;
     padding-right: 0;
+    margin-top: 0;
   }
 
   .landing-container h1 {
@@ -511,7 +537,7 @@ instead as it is cleaner and matches the overall style of the website. */
   }
 
   header a {
-    height: 15px;
+    height: 21px;
   }
 }
 
@@ -520,7 +546,7 @@ instead as it is cleaner and matches the overall style of the website. */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 40px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -898,6 +924,11 @@ are much smaller in width so i can fit more content in one line */
   .creatives2 {
     width: 700px;
   }
+
+  .creatives2 img,
+  .creatives2 video {
+    height: 310px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -1003,14 +1034,14 @@ increase the offset/blur intensity of the shadow */
   .webdev-projs img {
     height: 154px;
     width: 154px;
-    margin: 0 5px;
+    margin: 6px 5px;
   }
 
   .webdev-projs a:nth-child(4) img {
-    margin: 0 5px;
+    margin: 6px 5px;
   }
   .webdev-projs a:nth-child(5) img {
-    margin: 0 5px;
+    margin: 6px 5px;
   }
 }
 /* --------------------------------------------- Contact Form */
