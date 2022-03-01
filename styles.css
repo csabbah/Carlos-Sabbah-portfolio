@@ -1022,7 +1022,7 @@ the main container is centered vertically and horizontally*/
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
 }
 
 /* Stylizes the header text above the form "Let's talk!"*/
@@ -1182,9 +1182,10 @@ that the user can type more */
 
   .special-msg {
     width: 300px;
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
     margin-top: 20px;
+    opacity: 0.8;
   }
 
   form button {
@@ -1226,4 +1227,13 @@ that the user can type more */
   #notif-error.active {
     font-size: 11px;
   }
+}
+
+/* --------------------------------------------- Copyright text */
+
+#cp {
+  font-size: 12px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  text-align: center;
 }
