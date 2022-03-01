@@ -765,7 +765,7 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
 @media (max-width: 1000px) {
   .creative-container h1,
   .webdev-container h1 {
-    font-size: 53px;
+    font-size: 52px;
     line-height: 50px;
   }
 
@@ -785,8 +785,9 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
 }
 
 @media (max-width: 750px) {
-  .creative-container h1 {
-    font-size: 25px;
+  .creative-container h1,
+  .webdev-container h1 {
+    font-size: 22px;
     line-height: 26px;
   }
 
