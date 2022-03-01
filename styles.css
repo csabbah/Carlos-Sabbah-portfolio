@@ -788,16 +788,17 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
   .creative-container h1,
   .webdev-container h1 {
     line-height: 26px;
-    margin-left: 0px;
     margin-bottom: 0;
   }
 
   .creative-container h1 {
     font-size: 23.5px;
+    margin-left: 5px;
   }
 
   .webdev-container h1 {
-    font-size: 20px;
+    font-size: 18px;
+    margin-left: 0px;
   }
 
   #personal-creatives,
