@@ -34,8 +34,6 @@ window.addEventListener('scroll', () => {
   const scroll = Math.ceil(this.scrollY);
   if (scroll < 1420) {
     root.style.backgroundColor = `rgb(0, 0, 0`;
-    navStack.style.color = `rgb(0, 0, 0`;
-    navStack.style.backgroundColor = `rgb(255, 255, 2555`;
   }
 
   if (scroll > 150) {
@@ -78,8 +76,8 @@ window.addEventListener('scroll', () => {
 // ---------------------------- Nav stack function
 const navStack = document.getElementById('nav-stack');
 navStack.addEventListener('click', () => {
-  nav.classList.toggle('active');
-  navStack.classList.toggle('active');
+  nav.classList.toggle('active'); // Nav menu
+  navStack.classList.toggle('active'); // Nav icon
 });
 
 // ---------------------------- Scroll To functions
