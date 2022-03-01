@@ -30,6 +30,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 2;
+  pointer-events: none;
 }
 
 /* For every anchor tag in the header section, add cursor pointer and a very slight
@@ -38,6 +39,7 @@ header a {
   cursor: pointer;
   height: 25px;
   opacity: 0.85;
+  pointer-events: all;
 }
 
 /* Upon hover over each anchor tag, increase the opacity*/
