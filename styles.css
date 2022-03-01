@@ -453,14 +453,16 @@ are much smaller in width so i can fit more content in one line */
   height: 335px;
   margin: 5px 5px;
   object-fit: cover;
-  transition: 0.6s all ease-in-out;
-  width: 75px;
+  transition: 0.3s all ease-in-out;
+  width: 100px;
 }
 
 /* Upon hovering over each piece, it extends & reveals the full content */
 .creatives2 img:hover,
 .creatives2 video:hover {
   width: 200px;
+  margin: 5px 5px;
+  object-fit: cover;
   filter: saturate(1);
   transition: 0.3s all ease-in-out;
 }
@@ -507,10 +509,11 @@ the main container is centered vertically and horizontally*/
   margin-bottom: 100px;
 }
 
-/* Stylizes the header text above the form */
+/* Stylizes the header text above the form "Let's talk!"*/
 form h1 {
   font-weight: 400;
   font-style: italic;
+  margin-bottom: 25px;
 }
 
 /* Here i use a grid layout to build out a specific structure 
@@ -519,7 +522,6 @@ for each input field.*/
   column-gap: 20px;
   display: grid;
   grid-template: 38px 38px 110px / 275px 480px;
-  margin-top: 10px;
   row-gap: 20px;
 }
 
@@ -543,6 +545,19 @@ form button {
   height: 50px;
   margin-top: 20px;
   width: 175px;
+  border-radius: 5px;
+}
+
+/* Upon button hover, make the background color slightly darker */
+form button:hover {
+  background-color: rgba(210, 210, 210, 0.7);
+}
+
+/* Upon button click, make the button slightly smaller and
+make the background color darker */
+form button:active {
+  background-color: rgba(200, 200, 200, 0.7);
+  transform: scale(0.98);
 }
 
 /* Reduce the opacity of the placeholder of the input and textarea so it
@@ -560,6 +575,7 @@ adds a special backround color and remove the borders */
   background-color: rgba(227, 227, 227, 0.7);
   border: none;
   padding-left: 20px;
+  border-radius: 5px;
 }
 
 /* Same idea as above but for the textarea, push the text more down so it looks 
@@ -585,6 +601,7 @@ These are the standard styling for each element*/
   margin-top: 20px;
   opacity: 0;
   width: 770px;
+  font-size: 15px;
 }
 
 /* If all requirement in the script.js are met for sending the email,
