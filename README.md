@@ -2,7 +2,7 @@
 
 ## Purpose
 
-My personal portfolio website showcasing my creative projects, deployed websites and react application.
+I developed this portfolio website to showcase my creative projects, deployed websites and react application.
 
 ## Built With
 
