@@ -791,7 +791,7 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
   }
 
   .creative-container h1 {
-    font-size: 22.5px;
+    font-size: 21.8px;
     margin-left: 8px;
   }
 
@@ -1025,9 +1025,9 @@ increase the offset/blur intensity of the shadow */
   }
 
   .webdev-container h1 {
-    font-size: 23px;
+    font-size: 22px;
     line-height: 25px;
-    margin-left: 6px;
+    margin-left: 6.5px;
     margin-bottom: 5px;
   }
 
