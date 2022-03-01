@@ -1,5 +1,7 @@
 const rootElement = document.documentElement;
 const root = document.querySelector('body');
+const nav = document.querySelector('nav');
+const navLinkItems = document.querySelectorAll('nav a');
 
 const scrollMain = document.querySelector('.scroll-main');
 const scrollText = document.querySelector('.scroll');
@@ -32,6 +34,8 @@ window.addEventListener('scroll', () => {
   const scroll = Math.ceil(this.scrollY);
   if (scroll < 1420) {
     root.style.backgroundColor = `rgb(0, 0, 0`;
+    navStack.style.color = `rgb(0, 0, 0`;
+    navStack.style.backgroundColor = `rgb(255, 255, 2555`;
   }
 
   if (scroll > 150) {
@@ -68,15 +72,21 @@ window.addEventListener('scroll', () => {
 
     root.style.backgroundColor = `rgb(${y}, ${y}, ${y})`;
     brandTitle.style.color = `rgb(${x}, ${x}, ${x})`;
-    navStack.style.color = `rgb(${x}, ${x}, ${x})`;
-    navStack.style.backgroundColor = `rgb(${y}, ${y}, ${y})`;
+    navStack.style.color = `rgb(${y}, ${y}, ${y})`;
+    navStack.style.backgroundColor = `rgb(${x}, ${x}, ${x})`;
+
+    navLinkItems.forEach((item) => {
+      item.style.color = `rgb(${y}, ${y}, ${y})`;
+      nav.style.backgroundColor = `rgb(${x}, ${x}, ${x})`;
+    });
   }
 });
 
 // ---------------------------- Nav stack function
 const navStack = document.getElementById('nav-stack');
 navStack.addEventListener('click', () => {
-  root.classList.toggle('active');
+  nav.classList.toggle('active');
+  navStack.classList.toggle('active');
 });
 
 // ---------------------------- Scroll To functions

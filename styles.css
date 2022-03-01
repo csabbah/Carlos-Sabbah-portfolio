@@ -14,19 +14,14 @@
 /* Here i establish an initial background color for the body */
 body {
   background-color: black;
-  transform: translateY(0);
 }
 
-body.active {
-  background-color: black;
-  transform: translateY(100px);
-  transition: 0.3s all ease-in-out;
-}
 /* --------------------------------------------- Header */
 /* This stylizes the nav-stack icon*/
 #nav-stack {
   display: none;
 }
+
 /* This stylizes the header and gives it sticky position, additionally, 
 i center everything accordingly, set a specific height and include a
 smooth gradient from black to transparent */
@@ -184,8 +179,50 @@ nav p {
     height: 630px;
     padding-top: 70px;
   }
+
   nav {
+    opacity: 0;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 700px;
+    width: 160px;
+    margin-top: 0;
+    background-color: white;
+    transition: 0.3s all ease-in-out;
+  }
+
+  nav.active {
+    opacity: 1;
+    transition: 1s all ease-in-out;
+  }
+
+  nav a {
+    margin-top: 20px;
+    color: black;
+    font-weight: 500;
+  }
+
+  #nav-carlos {
+    font-size: 17px;
+    font-weight: 700;
+    margin-left: 5px;
+    margin-bottom: 40px;
+  }
+
+  ul p {
     display: none;
+  }
+
+  header li {
+    color: black;
+    font-weight: 600;
+    margin: 10px 6px;
+    border-bottom: 0.4px solid rgba(0, 0, 0, 0.5);
+  }
+
+  header ul {
+    flex-direction: column;
   }
 
   header {
@@ -194,10 +231,10 @@ nav p {
   }
 
   #nav-stack {
-    display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    right: -150px;
     z-index: 10;
     display: flex;
     margin-top: 20px;
@@ -210,6 +247,12 @@ nav p {
     border-radius: 5px;
     background-color: black;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: 0.5s all ease-in-out;
+  }
+
+  #nav-stack.active {
+    right: 0;
+    transition: 0.5s all ease-in-out;
   }
 }
 /* --------------------------------------------- Landing page (First intro) */
@@ -1123,6 +1166,11 @@ that the user can type more */
     font-size: 13px;
     margin-top: 20px;
   }
+
+  #notif-success,
+  #notif-error {
+    width: 700px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -1135,7 +1183,7 @@ that the user can type more */
   }
 
   .special-msg {
-    width: 320px;
+    width: 300px;
     font-size: 12px;
     text-align: center;
     margin-top: 20px;
@@ -1158,5 +1206,26 @@ that the user can type more */
 
   form h1 {
     font-size: 25px;
+  }
+
+  #notif-success,
+  #notif-error {
+    width: 309px;
+    border-radius: 0;
+    height: 35px;
+  }
+
+  #notif-error.active,
+  #notif-success.active {
+    align-items: center;
+    justify-content: center;
+  }
+
+  #notif-success.active {
+    font-size: 13px;
+  }
+
+  #notif-error.active {
+    font-size: 11px;
   }
 }
