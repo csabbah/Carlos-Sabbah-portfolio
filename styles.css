@@ -68,7 +68,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
   width: 1200px;
 }
 
@@ -189,6 +188,7 @@ nav p {
     width: 160px;
     margin-top: 0;
     background-color: white;
+    box-shadow: -5px 0 20px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s all ease-in-out;
   }
 
@@ -989,30 +989,28 @@ increase the offset/blur intensity of the shadow */
 }
 
 @media (max-width: 750px) {
+  #webdev-projects {
+    width: 330px;
+  }
+
   .webdev-container h1 {
     font-size: 25px;
     line-height: 26px;
-    margin-left: 0;
+    margin-left: 4px;
+    margin-bottom: 5px;
   }
 
   .webdev-projs img {
-    height: 140px;
-    width: 140px;
-    margin: 5px 10px;
-  }
-  .webdev-projs a:nth-child(1) img {
-    margin-left: -8px;
-  }
-
-  .webdev-projs a:nth-child(3) img {
-    margin-left: -8px;
+    height: 154px;
+    width: 154px;
+    margin: 0 5px;
   }
 
   .webdev-projs a:nth-child(4) img {
-    margin: 5px 10px;
+    margin: 0 5px;
   }
   .webdev-projs a:nth-child(5) img {
-    margin: 5px 10px;
+    margin: 0 5px;
   }
 }
 /* --------------------------------------------- Contact Form */

@@ -72,13 +72,6 @@ window.addEventListener('scroll', () => {
 
     root.style.backgroundColor = `rgb(${y}, ${y}, ${y})`;
     brandTitle.style.color = `rgb(${x}, ${x}, ${x})`;
-    navStack.style.color = `rgb(${y}, ${y}, ${y})`;
-    navStack.style.backgroundColor = `rgb(${x}, ${x}, ${x})`;
-
-    navLinkItems.forEach((item) => {
-      item.style.color = `rgb(${y}, ${y}, ${y})`;
-      nav.style.backgroundColor = `rgb(${x}, ${x}, ${x})`;
-    });
   }
 });
 
