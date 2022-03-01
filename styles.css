@@ -691,7 +691,7 @@ and i use space-between to push each container evenly to each edge */
   }
 
   .secondary-intro-section h3 {
-    font-size: 22px;
+    font-size: 20px;
     width: 320px;
   }
 
@@ -787,19 +787,22 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
 @media (max-width: 750px) {
   .creative-container h1,
   .webdev-container h1 {
-    font-size: 22px;
     line-height: 26px;
+    margin-left: 0px;
+    margin-bottom: 0;
+  }
+
+  .creative-container h1 {
+    font-size: 23.5px;
+  }
+
+  .webdev-container h1 {
+    font-size: 20px;
   }
 
   #personal-creatives,
   #webdev-projects {
-    width: 320px;
-  }
-
-  .creative-container h1,
-  .webdev-container h1 {
-    margin-left: 0px;
-    margin-bottom: 0;
+    width: 330px;
   }
 }
 
@@ -945,6 +948,11 @@ are much smaller in width so i can fit more content in one line */
   .creatives2 img,
   .creatives2 video {
     height: 290px;
+  }
+
+  .creatives2 img:hover,
+  .creatives2 video:hover {
+    width: 160px;
   }
 }
 /* --------------------------------------------- Webdev Section */
