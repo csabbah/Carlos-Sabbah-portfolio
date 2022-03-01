@@ -63,10 +63,10 @@ window.addEventListener('scroll', () => {
   }
 
   // Color fading function
-  if (scroll > 1400) {
+  if (scroll > 1200) {
     // Starting at position 1600, start executing the below lines of code
-    let y = 0 + (scroll - 1400) / 2; // The og background color is black (0), so we start at 0 and incremenet
-    let x = 255 - (scroll - 1400) / 2; // The og is white so we start at 255 and decrement
+    let y = 0 + (scroll - 1200) / 2; // The og background color is black (0), so we start at 0 and incremenet
+    let x = 255 - (scroll - 1200) / 2; // The og is white so we start at 255 and decrement
 
     root.style.backgroundColor = `rgb(${y}, ${y}, ${y})`;
     brandTitle.style.color = `rgb(${x}, ${x}, ${x})`;
