@@ -74,6 +74,11 @@ window.addEventListener('scroll', () => {
 });
 
 // ---------------------------- Nav stack function
+const closeNav = () => {
+  nav.classList.remove('active'); // Nav menu
+  navStack.classList.remove('active'); // Nav icon
+};
+
 const navStack = document.getElementById('nav-stack');
 navStack.addEventListener('click', () => {
   nav.classList.toggle('active'); // Nav menu
@@ -89,6 +94,7 @@ element1.addEventListener('click', () => {
     block: 'center',
     inline: 'nearest',
   });
+  closeNav();
 });
 
 var element2 = document.getElementById('nav-what-i-do');
@@ -98,6 +104,7 @@ element2.addEventListener('click', () => {
     block: 'center',
     inline: 'nearest',
   });
+  closeNav();
 });
 
 var element3 = document.getElementById('nav-personal');
@@ -107,6 +114,7 @@ element3.addEventListener('click', () => {
     block: 'end',
     inline: 'nearest',
   });
+  closeNav();
 });
 
 var element4 = document.getElementById('nav-webdev');
@@ -116,6 +124,7 @@ element4.addEventListener('click', () => {
     block: 'center',
     inline: 'nearest',
   });
+  closeNav();
 });
 
 var element5 = document.getElementById('nav-form');
@@ -125,6 +134,7 @@ element5.addEventListener('click', () => {
     block: 'center',
     inline: 'nearest',
   });
+  closeNav();
 });
 
 // ---------------------------- Receiving emails
