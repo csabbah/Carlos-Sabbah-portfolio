@@ -15,7 +15,6 @@
 body {
   background-color: black;
   transform: translateY(0);
-  transition: 0.1s all ease-in-out;
 }
 
 body.active {
