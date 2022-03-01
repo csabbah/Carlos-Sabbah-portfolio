@@ -17,7 +17,7 @@ const reactApp = document.getElementById('react-app');
 
 const contactForm = document.getElementById('contact-form');
 
-// On page load (or when you hit refresh), scroll to the very top
+// ---------------------------- On page load functions
 $(document).ready(function () {
   $(this).scrollTop(0);
   root.style.backgroundColor = `black`;
@@ -27,7 +27,7 @@ $(document).ready(function () {
   }, 100);
 });
 
-// ---------- Scroll conditionals
+// ---------------------------- Scroll conditionals
 window.addEventListener('scroll', () => {
   const scroll = Math.ceil(this.scrollY);
   if (scroll < 1420) {
@@ -71,8 +71,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// ---------- Scroll To functions
-
+// ---------------------------- Scroll To functions
 var element1 = document.getElementById('nav-carlos');
 const topSection = document.getElementById('top');
 element1.addEventListener('click', () => {
@@ -117,4 +116,68 @@ element5.addEventListener('click', () => {
     block: 'center',
     inline: 'nearest',
   });
+});
+
+// ---------------------------- Receiving emails
+// Declare all form input fields so we can extract the data upon submit
+const fromName = document.getElementById('fromName');
+const fromEmail = document.getElementById('from_email');
+const subjecttext = document.getElementById('subjectText');
+const message = document.getElementById('msg');
+
+// Add in temporary parameters
+var tempParams = {
+  from_name: fromName.value,
+  from_email: fromEmail.value,
+  subjectText: subjecttext.value,
+  msg: message.value,
+};
+
+function sendMail(params) {
+  emailjs.send('service_qnyqg1s', 'template_mcuznlb', tempParams).then(
+    function (response) {
+      console.log('SUCCESS!', response.status, response.text);
+    },
+    function (error) {
+      console.log('FAILED...', error);
+    }
+  );
+}
+
+// Extract all necessary form elements
+const sendBtn = document.getElementById('sendBtn');
+const successEl = document.getElementById('notif-success');
+const errorEl = document.getElementById('notif-error');
+
+sendBtn.addEventListener('click', (e) => {
+  e.preventDefault(); // Do not refresh the browser after hitting submit
+
+  if (
+    // If any of the input fields are empty....
+    from_email.value.length < 1 ||
+    fromName.value.length < 1 ||
+    subjecttext.value.length < 1 ||
+    message.value.length < 1
+  ) {
+    // Add active class to the error element...
+    errorEl.classList.add('active');
+    // Then after 4 seconds, remove the element
+    setTimeout(() => {
+      errorEl.classList.remove('active');
+    }, 4000);
+  } else {
+    // If ALL fields are filled in, execute the sendMail function
+    sendMail();
+    // Clear the input fields
+    fromName.value = '';
+    fromEmail.value = '';
+    subjecttext.value = '';
+    message.value = '';
+    // And add active class to the success element
+    successEl.classList.add('active');
+    setTimeout(() => {
+      // Then remove the element after 3 seconds
+      successEl.classList.remove('active');
+    }, 3000);
+  }
 });
