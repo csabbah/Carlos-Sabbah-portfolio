@@ -14,10 +14,20 @@
 /* Here i establish an initial background color for the body */
 body {
   background-color: black;
+  transform: translateY(0);
+  transition: 0.1s all ease-in-out;
 }
 
+body.active {
+  background-color: black;
+  transform: translateY(100px);
+  transition: 0.3s all ease-in-out;
+}
 /* --------------------------------------------- Header */
-
+/* This stylizes the nav-stack icon*/
+#nav-stack {
+  display: none;
+}
 /* This stylizes the header and gives it sticky position, additionally, 
 i center everything accordingly, set a specific height and include a
 smooth gradient from black to transparent */
@@ -63,6 +73,7 @@ from edge to edge, one is 'Carlos Sabbah' and the other are the nav link items  
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
   width: 1200px;
 }
@@ -115,6 +126,93 @@ nav p {
   animation-duration: 2.5s;
 }
 
+@media (max-width: 1330px) {
+  nav {
+    width: 1086px;
+  }
+  nav a {
+    font-size: 19px;
+  }
+
+  header li {
+    margin: 0 15px;
+  }
+  #nav-stack {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  nav {
+    width: 853px;
+  }
+
+  nav a {
+    font-size: 17px;
+  }
+
+  header li {
+    margin: 0 10px;
+  }
+  #nav-stack {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  nav {
+    display: flex;
+  }
+
+  nav {
+    width: 700px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  header li {
+    margin: 0 6px;
+  }
+  #nav-stack {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  #landing {
+    height: 630px;
+    padding-top: 70px;
+  }
+  nav {
+    display: none;
+  }
+
+  header {
+    justify-content: flex-end;
+    height: 0;
+  }
+
+  #nav-stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 40px;
+    color: white;
+    pointer-events: all;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: black;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  }
+}
 /* --------------------------------------------- Landing page (First intro) */
 
 /* The inactive state properties to the MAIN parent container */
@@ -136,6 +234,7 @@ nav p {
   color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 30px;
   padding-left: 40px;
   padding-right: 40px;
@@ -147,7 +246,6 @@ nav p {
   cursor: default;
   font-size: 100px;
   font-weight: 900;
-  transition: 0.1s color ease-in-out;
   transition: 0.2s all ease-in-out;
 }
 
@@ -278,7 +376,7 @@ more consitency in the container apperaence */
   margin-top: 100px;
 }
 
-/* The main container for the 'Github" and "My React App" elements under the bio */
+/* The main container for the 'Github" and "My React Portfolio" elements under the bio */
 .intro-section span {
   align-items: center;
   display: flex;
@@ -307,6 +405,106 @@ instead as it is cleaner and matches the overall style of the website. */
 
 .intro-section a:hover {
   opacity: 1;
+}
+
+@media (max-width: 1330px) {
+  .landing-container {
+    width: 1086px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .landing-container {
+    width: 853px;
+  }
+
+  .intro-section p {
+    font-size: 15px;
+    width: 405px;
+  }
+
+  .portrait img {
+    transform: translateX(10px);
+    width: 350px;
+  }
+
+  .landing-container h1 {
+    cursor: default;
+    font-size: 90px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .portrait img {
+    transform: translateX(10px);
+    width: 290px;
+  }
+
+  .intro-section {
+    margin-top: 20px;
+  }
+  .intro-section p {
+    font-size: 15px;
+    width: 355px;
+  }
+
+  .intro-section span {
+    font-size: 14px;
+    top: 5px;
+  }
+
+  .intro-section span img {
+    width: 22px;
+  }
+
+  .landing-container {
+    width: 700px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .landing-container h1 {
+    cursor: default;
+    font-size: 80px;
+  }
+
+  header a {
+    height: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  .landing-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .intro-section p {
+    font-size: 15px;
+    width: 305px;
+  }
+  .portrait img {
+    transform: translateX(10px) translateY(-60px);
+    width: 280px;
+  }
+
+  .landing-container h1 {
+    font-size: 80px;
+  }
+
+  .intro-section p {
+    cursor: default;
+    font-size: 15px;
+    width: 320px;
+  }
+
+  .intro-section {
+    margin-top: 0;
+  }
 }
 /* --------------------------------------------- Landing page secondary (2nd intro) */
 
@@ -358,12 +556,86 @@ and i use space-between to push each container evenly to each edge */
   margin-top: 15px;
 }
 
-/* --------------------------------------------- Creative, Webdev and React main properties */
+@media (max-width: 1330px) {
+  .secondary-intro-section h3 {
+    font-size: 39px;
+    width: 475px;
+  }
+
+  .secondary-intro-body p {
+    width: 500px;
+  }
+
+  .secondary-inner-container {
+    width: 1086px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .secondary-inner-container {
+    width: 853px;
+  }
+
+  .secondary-intro-section h3 {
+    font-size: 32px;
+    width: 400px;
+  }
+
+  .secondary-intro-body p {
+    width: 400px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #landing-secondary {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 220px;
+  }
+
+  .secondary-inner-container {
+    width: 700px;
+  }
+
+  .secondary-intro-section h3 {
+    font-size: 26px;
+    width: 335px;
+  }
+
+  .secondary-intro-body p {
+    width: 350px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  #landing-secondary {
+    margin-bottom: 150px;
+  }
+  .secondary-inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    height: 290px;
+  }
+
+  .secondary-intro-section h3 {
+    font-size: 22px;
+    width: 320px;
+  }
+
+  .secondary-intro-body p {
+    width: 320px;
+    font-size: 14px;
+  }
+}
+/* --------------------------------------------- Creative and Webdev main properties */
 
 /* Main parent container for each section, initial properties (inactive state) */
 #personal-creatives,
-#webdev-projects,
-#react-app {
+#webdev-projects {
   margin: 0 auto;
   width: 1300px;
   margin-bottom: 200px;
@@ -374,8 +646,7 @@ and i use space-between to push each container evenly to each edge */
 /* Main parent containers (active state) 
 Subtle transition across the Y axis along with increase to 100% in opacity */
 #personal-creatives.active,
-#webdev-projects.active,
-#react-app.active {
+#webdev-projects.active {
   transform: translateY(-50px);
   transition: var(--var-container-transition);
   opacity: 1;
@@ -383,14 +654,88 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
 
 /* Main header for each section (i.e. "Some of the creative projects i worked on") */
 .creative-container h1,
-.webdev-container h1,
-.react-container h1 {
+.webdev-container h1 {
   color: white;
   font-size: 97px;
   font-weight: 800;
   line-height: 80px;
   margin-bottom: 10px;
-  margin-left: 36px;
+  margin-left: 45px;
+}
+
+@media (max-width: 1330px) {
+  .creative-container h1,
+  .webdev-container h1 {
+    font-size: 88px;
+    line-height: 75px;
+    margin-left: 25px;
+  }
+
+  #personal-creatives,
+  #webdev-projects {
+    width: 1145px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .creative-container h1,
+  .webdev-container h1 {
+    font-size: 69px;
+    line-height: 61px;
+  }
+
+  #personal-creatives,
+  #webdev-projects {
+    width: 900px;
+  }
+
+  .creative-container h1 {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .creative-container h1 {
+    font-size: 56px;
+    line-height: 50px;
+  }
+
+  #personal-creatives,
+  #webdev-projects {
+    width: 700px;
+  }
+
+  .creative-container h1 {
+    margin-left: -2px;
+  }
+
+  .webdev-container h1 {
+    font-size: 56px;
+    line-height: 50px;
+  }
+
+  #personal-creatives,
+  #webdev-projects {
+    margin-bottom: 125px;
+  }
+}
+
+@media (max-width: 750px) {
+  .creative-container h1 {
+    font-size: 25px;
+    line-height: 26px;
+  }
+
+  #personal-creatives,
+  #webdev-projects {
+    width: 320px;
+  }
+
+  .creative-container h1,
+  .webdev-container h1 {
+    margin-left: 0px;
+    margin-bottom: 0;
+  }
 }
 
 /* --------------------------------------------- Creative Section */
@@ -409,7 +754,7 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
 .creatives1 {
   display: flex;
   overflow-x: scroll;
-  width: 1220px;
+  width: 1200px;
 }
 
 /* I stylize the image and video content pieces and ensure the content fits
@@ -442,7 +787,7 @@ much longer in width so they need to occupy the space accordingly */
 .creatives2 {
   display: flex;
   overflow-x: scroll;
-  width: 1220px;
+  width: 1200px;
 }
 
 /* Stylizes the story images/videos, originally the content pieces 
@@ -471,6 +816,67 @@ are much smaller in width so i can fit more content in one line */
   cursor: pointer;
 }
 
+@media (max-width: 1330px) {
+  .creatives1 {
+    width: 1086px;
+  }
+  .creatives2 {
+    width: 1086px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .creatives1 img,
+  .creatives1 video {
+    height: 225px;
+    margin: 5px 5px;
+    object-fit: cover;
+    width: 720px;
+  }
+
+  .creatives2 img,
+  .creatives2 video {
+    filter: saturate(1);
+    height: 275px;
+    width: 160px;
+  }
+
+  .creatives1 {
+    width: 853px;
+  }
+  .creatives2 {
+    width: 853px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .creatives1 {
+    width: 700px;
+  }
+  .creatives2 {
+    width: 700px;
+  }
+}
+
+@media (max-width: 750px) {
+  .creatives1 {
+    width: 320px;
+  }
+  .creatives2 {
+    width: 320px;
+  }
+
+  .creatives1 img,
+  .creatives1 video {
+    height: 185px;
+    width: 630px;
+  }
+
+  .creatives2 img,
+  .creatives2 video {
+    height: 290px;
+  }
+}
 /* --------------------------------------------- Webdev Section */
 /* I remove the underline for each anchor tag in the Webdev section
 as it disrupts the container visually and is not needed */
@@ -481,9 +887,9 @@ as it disrupts the container visually and is not needed */
 .webdev-projs img {
   box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  height: 225px;
+  height: 221px;
   margin: 5px 9px;
-  width: 225px;
+  width: 221px;
   /* I add a transition here so when you move away from the preview, it returns to 
   it's initial state 'smoothly' */
   transition: 0.1s all ease-in-out;
@@ -497,6 +903,76 @@ increase the offset/blur intensity of the shadow */
   transition: 0.1s all ease-in-out;
 }
 
+@media (max-width: 1330px) {
+  .webdev-projs img {
+    height: 199px;
+    width: 199px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .webdev-projs img {
+    height: 152px;
+    width: 152px;
+  }
+
+  .webdev-container h1 {
+    margin-left: 19px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .webdev-projs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .webdev-projs img {
+    height: 180px;
+    width: 180px;
+    margin: 5px 10px;
+  }
+
+  .webdev-container h1 {
+    margin-left: -1px;
+  }
+
+  .webdev-projs a:nth-child(4) img {
+    margin: 5px 10px;
+  }
+  .webdev-projs a:nth-child(5) img {
+    margin: 5px 10px;
+  }
+}
+
+@media (max-width: 750px) {
+  .webdev-container h1 {
+    font-size: 25px;
+    line-height: 26px;
+    margin-left: 0;
+  }
+
+  .webdev-projs img {
+    height: 140px;
+    width: 140px;
+    margin: 5px 10px;
+  }
+  .webdev-projs a:nth-child(1) img {
+    margin-left: -8px;
+  }
+
+  .webdev-projs a:nth-child(3) img {
+    margin-left: -8px;
+  }
+
+  .webdev-projs a:nth-child(4) img {
+    margin: 5px 10px;
+  }
+  .webdev-projs a:nth-child(5) img {
+    margin: 5px 10px;
+  }
+}
 /* --------------------------------------------- Contact Form */
 
 /* This stylizes the contact form at the bottom of the page, i ensure everything INSIDE
@@ -588,6 +1064,11 @@ Additionally, take up the full column of the form field grid */
   /* Remove the resize option for the textarea so it does not disrupt the form visually */
 }
 
+.special-msg {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
 /* ----- Form notification elements */
 
 /* The bottom properties handle the notification for the form
@@ -617,4 +1098,66 @@ show the success notification */
   background-color: rgb(255, 132, 132);
   display: flex;
   opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  .special-msg {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .form-inner-container {
+    column-gap: 20px;
+    display: grid;
+    grid-template: 38px 38px 110px / 270px 410px;
+    row-gap: 20px;
+  }
+
+  /* Specifically for the message input, give it a larger height so 
+that the user can type more */
+  .message {
+    height: 200px;
+  }
+
+  .special-msg {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .form-inner-container {
+    column-gap: 0;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+  }
+
+  .special-msg {
+    width: 320px;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  form button {
+    height: 40px;
+    width: 100px;
+  }
+
+  .form-inner-container textarea,
+  .form-inner-container input {
+    width: 290px;
+    height: 40px;
+  }
+
+  .form-inner-container textarea {
+    height: 250px;
+  }
+
+  form h1 {
+    font-size: 25px;
+  }
 }

@@ -68,7 +68,15 @@ window.addEventListener('scroll', () => {
 
     root.style.backgroundColor = `rgb(${y}, ${y}, ${y})`;
     brandTitle.style.color = `rgb(${x}, ${x}, ${x})`;
+    navStack.style.color = `rgb(${x}, ${x}, ${x})`;
+    navStack.style.backgroundColor = `rgb(${y}, ${y}, ${y})`;
   }
+});
+
+// ---------------------------- Nav stack function
+const navStack = document.getElementById('nav-stack');
+navStack.addEventListener('click', () => {
+  root.classList.toggle('active');
 });
 
 // ---------------------------- Scroll To functions
