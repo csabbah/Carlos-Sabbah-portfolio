@@ -1103,20 +1103,20 @@ so i don't disrupt the layout */
   .webdev-projs img {
     height: 154px;
     width: 154px;
-    margin: 10px 5px;
+    margin: 15px 5px;
   }
 
   .webdev-projs a:nth-child(4) img {
-    margin: 10px 5px;
+    margin: 15px 5px;
   }
   .webdev-projs a:nth-child(5) img {
-    margin: 10px 5px;
+    margin: 15px 5px;
   }
 
   .webdev-projs p {
-    transform: translateY(-19px);
+    transform: translateY(-15px);
     margin-left: 4px;
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 /* --------------------------------------------- Contact Form */
