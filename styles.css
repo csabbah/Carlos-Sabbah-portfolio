@@ -433,7 +433,7 @@ hr {
 
 /* This is for the portrait image, i push it slightly to the right so there's 
 more consitency in the container apperaence */
-.landing-container img {
+.landing-container img:last-child img {
   transform: translateX(10px);
   width: 450px;
 }
@@ -492,7 +492,7 @@ instead as it is cleaner and matches the overall style of the website. */
     width: 405px;
   }
 
-  .landing-container img {
+  .landing-container img:last-child {
     transform: translateX(10px);
     width: 350px;
   }
@@ -504,7 +504,7 @@ instead as it is cleaner and matches the overall style of the website. */
 }
 
 @media (max-width: 1000px) {
-  .landing-container img {
+  .landing-container img:last-child {
     transform: translateX(10px);
     width: 290px;
   }
@@ -548,7 +548,7 @@ instead as it is cleaner and matches the overall style of the website. */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 60px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -557,7 +557,7 @@ instead as it is cleaner and matches the overall style of the website. */
     font-size: 15px;
     width: 305px;
   }
-  .landing-container img {
+  .landing-container img:last-child {
     transform: translateX(10px) translateY(-60px);
     width: 280px;
   }
@@ -574,6 +574,16 @@ instead as it is cleaner and matches the overall style of the website. */
 
   .intro-section {
     margin-top: 0;
+  }
+
+  .intro-section span a {
+    font-size: 13px;
+  }
+
+  /* This resizes the logos for each link item and inverts them from black to white */
+  .intro-section span img {
+    filter: brightness(0) invert(1);
+    width: 20px;
   }
 }
 /* --------------------------------------------- Landing page secondary (2nd intro) */
@@ -1156,7 +1166,6 @@ Additionally, take up the full column of the form field grid */
 }
 
 /* ----- Form notification elements */
-
 /* The bottom properties handle the notification for the form
 These are the standard styling for each element*/
 #notif-success,
