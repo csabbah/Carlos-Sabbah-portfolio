@@ -432,8 +432,8 @@ hr {
 }
 
 /* This is for the portrait image, i push it slightly to the right so there's 
-more consitency in the container apperaence */
-.landing-container img:last-child img {
+more consistency in the container apperaence */
+#portrait {
   transform: translateX(10px);
   width: 450px;
 }
@@ -492,7 +492,7 @@ instead as it is cleaner and matches the overall style of the website. */
     width: 405px;
   }
 
-  .landing-container img:last-child {
+  #portrait {
     transform: translateX(10px);
     width: 350px;
   }
@@ -504,7 +504,7 @@ instead as it is cleaner and matches the overall style of the website. */
 }
 
 @media (max-width: 1000px) {
-  .landing-container img:last-child {
+  #portrait {
     transform: translateX(10px);
     width: 290px;
   }
@@ -557,7 +557,7 @@ instead as it is cleaner and matches the overall style of the website. */
     font-size: 15px;
     width: 305px;
   }
-  .landing-container img:last-child {
+  #portrait {
     transform: translateX(10px) translateY(-60px);
     width: 280px;
   }
