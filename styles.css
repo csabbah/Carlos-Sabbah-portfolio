@@ -776,7 +776,7 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
 @media (max-width: 1000px) {
   .creative-container h1,
   .webdev-container h1 {
-    font-size: 52px;
+    font-size: 56.5px;
     line-height: 50px;
   }
 
@@ -839,6 +839,14 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
   margin: 5px 5px;
   object-fit: cover;
   width: 550px;
+  filter: saturate(0.65) brightness(50%);
+  transition: 0.3s all ease-in-out;
+}
+
+.creatives1 img:hover,
+.creatives1 video:hover {
+  filter: saturate(1) brightness(1);
+  transition: 0.3s all ease-in-out;
 }
 
 /* Naturally, i add cursor pointer for the videos */
@@ -906,6 +914,13 @@ are much smaller in width so i can fit more content in one line */
     margin: 5px 5px;
     object-fit: cover;
     width: 720px;
+    filter: saturate(1) brightness(1);
+  }
+
+  /* Cancel out previous (original) hover effect */
+  .creatives1 img:hover,
+  .creatives1 video:hover {
+    filter: saturate(1) brightness(1);
   }
 
   .creatives2 img,
@@ -973,6 +988,7 @@ are much smaller in width so i can fit more content in one line */
   .creatives2 img:hover,
   .creatives2 video:hover {
     width: 160px;
+    height: 290px;
   }
 }
 /* --------------------------------------------- Webdev Section */
@@ -1001,10 +1017,25 @@ increase the offset/blur intensity of the shadow */
   transition: 0.1s all ease-in-out;
 }
 
+/* These are for the webDev project titles, i use position absolute 
+so i don't disrupt the layout */
+.webdev-projs p {
+  position: absolute;
+  margin-left: 8px;
+  transform: translateY(-5px);
+  color: black;
+  font-size: 18px;
+}
+
 @media (max-width: 1330px) {
   .webdev-projs img {
     height: 199px;
     width: 199px;
+  }
+
+  .webdev-projs p {
+    margin-left: 7px;
+    font-size: 17px;
   }
 }
 
@@ -1017,6 +1048,11 @@ increase the offset/blur intensity of the shadow */
   .webdev-container h1 {
     margin-left: 19px;
   }
+
+  .webdev-projs p {
+    margin-left: 7px;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -1025,22 +1061,27 @@ increase the offset/blur intensity of the shadow */
     flex-wrap: wrap;
     justify-content: center;
   }
-
-  .webdev-projs img {
-    height: 180px;
-    width: 180px;
-    margin: 5px 10px;
-  }
-
   .webdev-container h1 {
     margin-left: -1px;
   }
 
+  .webdev-projs img {
+    height: 180px;
+    width: 180px;
+    margin: 20px 20px;
+  }
+
   .webdev-projs a:nth-child(4) img {
-    margin: 5px 10px;
+    margin: 20px 20px;
   }
   .webdev-projs a:nth-child(5) img {
-    margin: 5px 10px;
+    margin: 20px 20px;
+  }
+
+  .webdev-projs p {
+    transform: translateY(-17px);
+    margin-left: 18px;
+    font-size: 15px;
   }
 }
 
@@ -1059,14 +1100,20 @@ increase the offset/blur intensity of the shadow */
   .webdev-projs img {
     height: 154px;
     width: 154px;
-    margin: 6px 5px;
+    margin: 15px 5px;
   }
 
   .webdev-projs a:nth-child(4) img {
-    margin: 6px 5px;
+    margin: 15px 5px;
   }
   .webdev-projs a:nth-child(5) img {
-    margin: 6px 5px;
+    margin: 15px 5px;
+  }
+
+  .webdev-projs p {
+    transform: translateY(-19px);
+    margin-left: 4px;
+    font-size: 14px;
   }
 }
 /* --------------------------------------------- Contact Form */
