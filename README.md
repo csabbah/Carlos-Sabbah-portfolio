@@ -1,8 +1,8 @@
-# Professional Portfolio
+# Professional Portfolio - March 2nd 2022 - Carlos Sabbah
 
 ## Purpose
 
-I developed this portfolio website to showcase my creative projects, deployed websites and react application.
+I developed this professional portfolio to showcase my creative projects, deployed websites and links to my react application and github account. I include 2 short introductory bodies outlining my character (area of focus), skills and experience. Additionally, i implemented a functional contact form to get in touch with me via email using services by Emailjs. 
 
 ## Built With
 
@@ -17,5 +17,3 @@ https://csabbah.github.io/professional-portfolio/
 ## Contribution
 
 Made with ❤️ by Carlos Sabbah
-
-<img width="1558" alt="Screen Shot 2022-02-28 at 3 47 21 PM" src="https://user-images.githubusercontent.com/91699101/156056189-b51a62f4-0ff1-4818-80a1-173530f29f98.png">
