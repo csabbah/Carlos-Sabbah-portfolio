@@ -992,6 +992,10 @@ are much smaller in width so i can fit more content in one line */
   }
 }
 /* --------------------------------------------- Webdev Section */
+.webdev-projs {
+  display: flex;
+  flex-wrap: wrap;
+}
 /* I remove the underline for each anchor tag in the Webdev section
 as it disrupts the container visually and is not needed */
 .webdev-projs a {
@@ -1002,7 +1006,7 @@ as it disrupts the container visually and is not needed */
   box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
   height: 221px;
-  margin: 5px 9px;
+  margin: 5px 12px;
   width: 221px;
   /* I add a transition here so when you move away from the preview, it returns to 
   it's initial state 'smoothly' */
@@ -1020,7 +1024,6 @@ increase the offset/blur intensity of the shadow */
 /* These are for the webDev project titles, i use position absolute 
 so i don't disrupt the layout */
 .webdev-projs p {
-  position: absolute;
   margin-left: 8px;
   transform: translateY(-5px);
   color: black;
