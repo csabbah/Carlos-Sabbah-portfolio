@@ -40,10 +40,6 @@ p {
 }
 
 /* --------------------------------------------- Header */
-/* This stylizes the nav-stack icon*/
-#nav-stack {
-  display: none;
-}
 
 /* This stylizes the header and gives it sticky position, additionally, 
 i center everything accordingly, set a specific height and include a
@@ -106,6 +102,11 @@ nav a {
 /* Lower the opacity for the nav link item dividers i.e. '/' */
 nav p {
   opacity: 0.2;
+}
+
+/* This stylizes the nav-stack icon*/
+#nav-stack {
+  display: none;
 }
 
 /* Upon application load, exeute this animation for the nav link items*/
@@ -857,7 +858,7 @@ much longer in width so they need to occupy the space accordingly */
 are much smaller in width so i can fit more content in one line */
 .creatives2 img,
 .creatives2 video {
-  filter: saturate(0.65);
+  filter: saturate(0.65) brightness(50%);
   height: 335px;
   margin: 5px 5px;
   object-fit: cover;
@@ -871,7 +872,7 @@ are much smaller in width so i can fit more content in one line */
   width: 200px;
   margin: 5px 5px;
   object-fit: cover;
-  filter: saturate(1);
+  filter: saturate(1) brightness(1);
   transition: 0.3s all ease-in-out;
 }
 /* Naturally, i add cursor pointer for the videos */
@@ -899,8 +900,15 @@ are much smaller in width so i can fit more content in one line */
 
   .creatives2 img,
   .creatives2 video {
-    filter: saturate(1);
-    height: 275px;
+    filter: saturate(1) brightness(1);
+    height: 290px;
+    width: 160px;
+  }
+
+  /* Cancel out previous (original) hover effect */
+  .creatives2 img:hover,
+  .creatives2 video:hover {
+    height: 290px;
     width: 160px;
   }
 
@@ -923,6 +931,13 @@ are much smaller in width so i can fit more content in one line */
   .creatives2 img,
   .creatives2 video {
     height: 310px;
+  }
+
+  /* Cancel out previous (original) hover effect */
+  .creatives2 img:hover,
+  .creatives2 video:hover {
+    height: 310px;
+    width: 160px;
   }
 }
 
