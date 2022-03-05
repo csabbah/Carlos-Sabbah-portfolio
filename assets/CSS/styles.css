@@ -343,7 +343,7 @@ this makes it looks more subtle and classy */
   font-weight: 200;
   position: relative;
   text-align: justify;
-  top: -13.5px;
+  top: -5px;
   width: 535px;
 }
 
@@ -1117,7 +1117,7 @@ so i don't disrupt the layout */
     font-size: 22px;
     line-height: 25px;
     margin-left: 6.5px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 
   .webdev-projs img {
