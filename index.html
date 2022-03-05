@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,800;1,300;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/CSS/styles.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- Serves no purpose other than a target element to scroll to -->
+    <div id="top"></div>
+
+    <header>
+      <i id="nav-stack" class="fa-solid fa-bars"></i>
+      <nav>
+        <!-- No href was added for nav anchor tags because the scroll function is being handled in script.js -->
+        <a id="nav-carlos" class="animation-navLinkFade">Carlos Sabbah</a>
+        <ul class="animation-navLIFade">
+          <li>
+            <a id="nav-what-i-do">What i do</a>
+          </li>
+          <p>/</p>
+          <li>
+            <a id="nav-personal">Creative Projects</a>
+          </li>
+          <p>/</p>
+          <li>
+            <a id="nav-webdev">Web Dev projects</a>
+          </li>
+          <p>/</p>
+          <li id="nav-form" style="margin-right: 0">
+            <a>Contact me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="landing">
+      <div class="landing-container">
+        <article class="intro-section">
+          <h3>Hi, it's me</h3>
+          <h1>
+            <!-- I wrap each character with a seperate em tag in order to give each
+            character a unique hover color  -->
+            <em>C</em><em>a</em><em>r</em><em>l</em><em>o</em><em>s</em
+            ><em>.</em>
+          </h1>
+          <p class="landing-body">
+            I'm an aspiring frontend developer with over 7 years of experience
+            in marketing and content creation. I have unique eye for creativity,
+            love to solve critical problems and a keen to always improve and
+            learn more. <br />
+            <span>
+              <span>
+                <img
+                  src="https://i.imgur.com/Dr5B5zu.png"
+                  alt="Icon of the Github logo"
+                />
+                <a
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href="https://github.com/csabbah"
+                >
+                  My Github
+                </a>
+              </span>
+              <span style="margin-left: 20px">
+                <img
+                  src="https://i.imgur.com/uZ9LRvt.png"
+                  alt="Icon of the React logo"
+                />
+                <a
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href="https://carlossabbah.com/"
+                >
+                  My React Portfolio
+                </a>
+              </span>
+            </span>
+          </p>
+          <div class="scroll-main animation-fadedown">
+            <p class="scroll">Scroll</p>
+            <hr class="intro-line" />
+          </div>
+        </article>
+        <img
+          id="portrait"
+          src="https://i.imgur.com/dApqIHX.png"
+          alt="Profile picture of me (Carlos)"
+        />
+      </div>
+    </section>
+
+    <section id="landing-secondary">
+      <article class="secondary-inner-container">
+        <div class="secondary-intro-section">
+          <h3>Frontend Development, Top Tier Influencer & Content Creator</h3>
+        </div>
+        <div class="secondary-intro-body">
+          <p>
+            Certified in advanced Python (Django, Automation, web scraping and
+            Data analysis), HTML, CSS, JavaScript (Working with API, jQuery,
+            React.js, Bootstrap/Daisyui and Tailwind) and in all major adobe
+            programs including, Premiere, After effects, Illustrator, Photoshop
+            and XD.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section id="personal-creatives">
+      <div class="creative-container">
+        <h1>SOME OF THE CREATIVE PROJECTS I WORKED ON.</h1>
+        <div class="creatives1">
+          <div class="banners">
+            <img
+              style="margin-left: 0"
+              src="https://i.imgur.com/RJvYxsi.jpg"
+              alt="Image of a PUBG themed basketball banner"
+            />
+            <img
+              src="https://i.imgur.com/sn8JL1E.png"
+              alt="Image of a PUBG themed bus panel"
+            />
+          </div>
+          <video controls>
+            <source
+              src="https://i.imgur.com/v4hsbZE.mp4#t=0.5"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <img
+            src="https://i.imgur.com/zQYfZ6W.png"
+            alt="Image of a PUBG crate with a date label"
+          />
+          <img
+            src="https://i.imgur.com/JNpqwtY.png"
+            alt="Image of a video game themed sign up screen"
+          />
+
+          <img
+            src="https://i.imgur.com/11O0xFJ.png"
+            alt="Image of a magnifying glass video game characters jumping out the phone"
+          />
+          <img
+            src="https://i.imgur.com/BQE4kkV.png"
+            alt="Image of PUBG characters with one golden in the center"
+          />
+          <img
+            style="margin-right: 0"
+            src="https://i.imgur.com/0TFtYa1.png"
+            alt="Image of a girl holding a phone with video game characters jumping out the phone"
+          />
+        </div>
+        <div class="creatives2">
+          <video style="margin-left: 0" controls>
+            <source
+              src="https://i.imgur.com/Q7Wq53e.mp4#t=0.5"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <video controls>
+            <source
+              src="https://i.imgur.com/VNuo82k.mp4#t=0.5"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <video controls>
+            <source
+              src="https://i.imgur.com/6QAJkFW.mp4#t=0.5"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <video controls>
+            <source
+              src="https://i.imgur.com/RpYzuL1.mp4#t=0.5"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <video controls>
+            <source
+              src="https://i.imgur.com/JX16csS.mp4#t=0.5"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <img
+            src="https://i.imgur.com/uW3oElj.png"
+            alt="Image of street figher and Tekken"
+          />
+          <img
+            src="https://i.imgur.com/HAndfWE.png"
+            alt="Image of call of duty games"
+          />
+          <img
+            src="https://i.imgur.com/7xXoAT3.png"
+            alt="Image of Zelda and Mario worlds"
+          />
+          <img
+            src="https://i.imgur.com/dnYvFiE.png"
+            alt="Image of Iron man and Batman"
+          />
+          <img
+            src="https://i.imgur.com/jdqmfjg.png"
+            alt="Image of Skyrim and Elder Scrolls Online"
+          />
+          <img
+            src="https://i.imgur.com/5WnHYY8.png"
+            alt="Image of Call of duty and Fortnite"
+          />
+          <img
+            src="https://i.imgur.com/kBTb0mn.png"
+            alt="Image of Call of duty and Battlfield"
+          />
+          <img
+            src="https://i.imgur.com/o81ykgZ.png"
+            alt="Image of Goku and Kratos (God of War)"
+          />
+          <img
+            src="https://i.imgur.com/1e9vgy5.png"
+            alt="Image of Dishonored games"
+          />
+          <img
+            style="margin-right: 0"
+            src="https://i.imgur.com/zkADHNM.png"
+            alt="Image of Ubisoft vs. EA"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="webdev-projects">
+      <div class="webdev-container">
+        <h1 id="brand-title">SOME OF THE WEBSITES I DEVELOPED & DEPLOYED.</h1>
+        <div class="webdev-projs">
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://csabbah.github.io/Project-1/"
+          >
+            <img
+              src="https://i.imgur.com/lKHy9RW.png"
+              alt="Preview image of the project 1 website"
+            />
+            <p>Practice Project 1</p>
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://csabbah.github.io/Project-4/"
+          >
+            <img
+              src="https://i.imgur.com/q61WAw1.jpg"
+              alt="Preview image of the project 4 website"
+            />
+            <p>Practice Project 4</p>
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://csabbah.github.io/Project-7/"
+          >
+            <img
+              src="https://i.imgur.com/pfBs3ab.jpg"
+              alt="Preview image of the project 7 website"
+            />
+            <p>Practice Project 7</p>
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://csabbah.github.io/Project-9/"
+          >
+            <img
+              src="https://i.imgur.com/UGh55Qi.jpg"
+              alt="Preview image of the project 9 website"
+            />
+            <p>Practice Project 9</p>
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://csabbah.github.io/run-buddy/"
+          >
+            <img
+              src="https://i.imgur.com/1vTF2a8.png"
+              alt="Preview image of the run buddy website"
+            />
+            <p>Run Buddy</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-form">
+      <form>
+        <h1>Let's talk!</h1>
+        <div class="form-inner-container">
+          <input
+            class="name"
+            type="text"
+            name="fromName"
+            id="fromName"
+            placeholder="Full name*"
+          />
+          <input
+            name="from_email"
+            id="from_email"
+            class="email"
+            type="email"
+            placeholder="E-mail*"
+          />
+          <input
+            name="subjectText"
+            id="subjectText"
+            class="subject"
+            type="text"
+            placeholder="Subject*"
+          />
+          <textarea id="msg" placeholder="Message*"></textarea>
+        </div>
+        <!-- The 2 update messages below are initially set to opacity 0 & display none. 
+        Which message appears is dependent on the condition that is met when form is submitted -->
+        <p id="notif-success">Message sent successfully.</p>
+        <p id="notif-error">
+          Message sent failed, please fill in all required fields.
+        </p>
+        <button id="sendBtn">Send</button>
+      </form>
+      <p class="special-msg">
+        Dear UofT grader, this is a functioning form, you may send me a nice
+        message if you like :)
+      </p>
+    </section>
+
+    <p id="cp">I built everything on this website - Carlos Sabbah.</p>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init('user_7HV2kbTsvjER9prS4OXfg');
+      })();
+    </script>
+    <script
+      src="https://kit.fontawesome.com/7cd1d2e75a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
