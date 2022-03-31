@@ -17,6 +17,7 @@
 * {
   margin: 0;
   padding: 0;
+  touch-action: manipulation;
 }
 
 /* Here i establish an initial background color for the body */

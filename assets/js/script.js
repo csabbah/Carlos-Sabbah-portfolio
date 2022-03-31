@@ -20,8 +20,11 @@ const reactApp = document.getElementById('react-app');
 const contactForm = document.getElementById('contact-form');
 
 // ---------------------------- On page load functions
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
 $(document).ready(function () {
-  $(this).scrollTop(0);
   root.style.backgroundColor = `black`;
 
   setTimeout(() => {
