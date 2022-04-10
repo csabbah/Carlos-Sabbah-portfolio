@@ -1006,7 +1006,7 @@ as it disrupts the container visually and is not needed */
 }
 /* These stylize the size of the preview images for each website */
 .webdev-projs img {
-  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   height: 204px;
   margin: 25px 23px;
@@ -1023,7 +1023,7 @@ as it disrupts the container visually and is not needed */
 /* Upon hovering over a preview image, increase the scale by a small factor and 
 increase the offset/blur intensity of the shadow */
 .webdev-projs img:hover {
-  box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.1);
   transform: scale(1.1);
   transition: 0.1s all ease-in-out;
 }
