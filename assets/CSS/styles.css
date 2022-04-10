@@ -1031,7 +1031,7 @@ increase the offset/blur intensity of the shadow */
 /* These are for the webDev project titles, i use position absolute 
 so i don't disrupt the layout */
 .webdev-projs p {
-  margin-left: 19px;
+  margin-left: 33px;
   transform: translateY(-10px);
   color: black;
   font-size: 18px;
