@@ -700,7 +700,7 @@ and i use space-between to push each container evenly to each edge */
     flex-direction: column;
     align-items: center;
     text-align: justify;
-    height: 290px;
+    height: 230px;
   }
 
   .secondary-intro-section h3 {
@@ -997,6 +997,7 @@ are much smaller in width so i can fit more content in one line */
 .webdev-projs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 /* I remove the underline for each anchor tag in the Webdev section
 as it disrupts the container visually and is not needed */
@@ -1008,16 +1009,15 @@ as it disrupts the container visually and is not needed */
   box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
   height: 204px;
-  margin: 5px 12px;
+  margin: 25px 23px;
   width: 204px;
   /* I add a transition here so when you move away from the preview, it returns to 
   it's initial state 'smoothly' */
   transition: 0.1s all ease-in-out;
 }
 
-.webdev-projs a:nth-child(1) img {
-  height: 290px;
-  width: 290px;
+#brand-title {
+  font-size: 88px;
 }
 
 /* Upon hovering over a preview image, increase the scale by a small factor and 
@@ -1031,51 +1031,67 @@ increase the offset/blur intensity of the shadow */
 /* These are for the webDev project titles, i use position absolute 
 so i don't disrupt the layout */
 .webdev-projs p {
-  margin-left: 8px;
-  transform: translateY(10px);
+  margin-left: 19px;
+  transform: translateY(-10px);
   color: black;
   font-size: 18px;
 }
 
 @media (max-width: 1330px) {
-  .webdev-projs img {
-    height: 184px;
-    width: 184px;
+  .webdev-projs {
+    width: 1190px;
   }
 
-  .webdev-projs a:nth-child(1) img {
-    height: 250px;
-    width: 250px;
+  .webdev-projs img {
+    margin: 25px 21px;
   }
+
+  .webdev-projs img {
+    height: 185px;
+    width: 185px;
+  }
+
   .webdev-projs p {
-    margin-left: 7px;
+    margin-left: 20px;
     font-size: 17px;
+  }
+
+  #brand-title {
+    line-height: 65px;
+    font-size: 78px;
   }
 }
 
 @media (max-width: 1200px) {
-  .webdev-projs img {
-    height: 142px;
-    width: 142px;
+  .webdev-projs {
+    width: 1080px;
   }
 
-  .webdev-projs a:nth-child(1) img {
-    height: 190px;
-    width: 190px;
+  .webdev-projs img {
+    height: 178px;
+    width: 178px;
   }
 
   .webdev-container h1 {
     margin-left: 19px;
   }
-
+  .webdev-projs img {
+    margin: 25px 25px;
+  }
   .webdev-projs p {
-    margin-left: 11px;
+    margin-left: 20px;
     font-size: 13px;
+  }
+
+  #brand-title {
+    line-height: 50px;
+    font-size: 56px;
   }
 }
 
 @media (max-width: 1000px) {
   .webdev-projs {
+    width: 900px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1085,14 +1101,9 @@ so i don't disrupt the layout */
   }
 
   .webdev-projs img {
-    height: 180px;
-    width: 180px;
+    height: 207px;
+    width: 207px;
     margin: 20px 20px;
-  }
-
-  .webdev-projs a:nth-child(1) img {
-    height: 220px;
-    width: 220px;
   }
 
   .webdev-projs a:nth-child(4) img {
@@ -1103,9 +1114,14 @@ so i don't disrupt the layout */
   }
 
   .webdev-projs p {
-    transform: translateY(-17px);
+    transform: translateY(-10px);
     margin-left: 18px;
     font-size: 15px;
+  }
+
+  #brand-title {
+    line-height: 44px;
+    font-size: 48px;
   }
 }
 
@@ -1121,28 +1137,30 @@ so i don't disrupt the layout */
     margin-bottom: 0px;
   }
 
-  .webdev-projs img {
-    height: 154px;
-    width: 154px;
-    margin: 15px 5px;
+  .webdev-projs {
+    width: 440px;
   }
-
-  .webdev-projs a:nth-child(1) img {
-    height: 312px;
-    width: 312px;
+  .webdev-projs img {
+    height: 144px;
+    width: 144px;
+    margin: 15px 15px;
   }
 
   .webdev-projs a:nth-child(4) img {
-    margin: 15px 5px;
+    margin: 15px 15px;
   }
   .webdev-projs a:nth-child(5) img {
-    margin: 15px 5px;
+    margin: 15px 15px;
   }
 
   .webdev-projs p {
-    transform: translateY(-15px);
-    margin-left: 4px;
+    transform: translateY(-5px);
+    margin-left: 17px;
     font-size: 15px;
+  }
+  #brand-title {
+    line-height: 21px;
+    font-size: 21px;
   }
 }
 /* --------------------------------------------- Contact Form */
