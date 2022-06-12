@@ -1034,7 +1034,7 @@ as it disrupts the container visually and is not needed */
 increase the offset/blur intensity of the shadow */
 .webdev-projs img:hover {
   box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.1);
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.1s all ease-in-out;
 }
 
