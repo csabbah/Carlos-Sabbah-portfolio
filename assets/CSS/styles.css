@@ -744,6 +744,11 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
   margin-left: 45px;
 }
 
+#latest-proj {
+  width: 240px;
+  height: 240px;
+}
+
 @media (max-width: 1330px) {
   .creative-container h1,
   .webdev-container h1 {
@@ -798,6 +803,11 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
 }
 
 @media (max-width: 750px) {
+  #latest-proj {
+    width: 315px;
+    height: 315px;
+  }
+
   .creative-container h1 {
     line-height: 26px;
     margin-bottom: 0;
