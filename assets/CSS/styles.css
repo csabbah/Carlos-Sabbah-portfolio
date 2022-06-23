@@ -23,8 +23,11 @@
 /* Here i establish an initial background color for the body */
 body {
   background-color: black;
-  overflow-x: hidden;
 }
+
+html, body {
+  overflow-x:hidden 
+} 
 
 h1 {
   font-family: 'PoppinsHeader', -apple-system, BlinkMacSystemFont, 'Segoe UI',
