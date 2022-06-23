@@ -23,6 +23,7 @@
 /* Here i establish an initial background color for the body */
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 
 h1 {
