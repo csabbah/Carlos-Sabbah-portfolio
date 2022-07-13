@@ -25,7 +25,9 @@ body {
   background-color: black;
 }
 
-body {
+body,
+section,
+main {
   overflow-x: hidden;
 }
 
