@@ -89,55 +89,43 @@ navStack.addEventListener('click', () => {
 });
 
 // ---------------------------- Scroll To functions
-var element1 = document.getElementById('nav-carlos');
-const topSection = document.getElementById('top');
-element1.addEventListener('click', () => {
-  topSection.scrollIntoView({
-    behavior: 'smooth',
-    block: 'center',
-    inline: 'nearest',
-  });
-  closeNav();
-});
 
-var element2 = document.getElementById('nav-what-i-do');
-element2.addEventListener('click', () => {
-  landingSecondary.scrollIntoView({
-    behavior: 'smooth',
-    block: 'center',
-    inline: 'nearest',
-  });
-  closeNav();
-});
+document.querySelectorAll('.nav-item').forEach((item) => {
+  item.addEventListener('click', (e) => {
+    const navStackStyles = window.getComputedStyle(navStack);
+    if (navStackStyles.display == 'flex') {
+      if (
+        e.target.innerText == 'Creative Projects' ||
+        e.target.innerText == 'Web Dev projects'
+      ) {
+        let navItem = e.target.classList[2];
+        let scrollEl = document.getElementById(navItem);
+        scrollEl.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+          inline: 'nearest',
+        });
+      } else {
+        let navItem = e.target.classList[1];
+        let scrollEl = document.getElementById(navItem);
+        scrollEl.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+          inline: 'nearest',
+        });
+      }
+    } else {
+      let navItem = e.target.classList[1];
+      let scrollEl = document.getElementById(navItem);
+      scrollEl.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'nearest',
+      });
+    }
 
-var element3 = document.getElementById('nav-personal');
-element3.addEventListener('click', () => {
-  personalCreatives.scrollIntoView({
-    behavior: 'smooth',
-    block: 'end',
-    inline: 'nearest',
+    closeNav();
   });
-  closeNav();
-});
-
-var element4 = document.getElementById('nav-webdev');
-element4.addEventListener('click', () => {
-  webDevProjects.scrollIntoView({
-    behavior: 'smooth',
-    block: 'center',
-    inline: 'nearest',
-  });
-  closeNav();
-});
-
-var element5 = document.getElementById('nav-form');
-element5.addEventListener('click', () => {
-  contactForm.scrollIntoView({
-    behavior: 'smooth',
-    block: 'center',
-    inline: 'nearest',
-  });
-  closeNav();
 });
 
 // ---------------------------- Receiving emails

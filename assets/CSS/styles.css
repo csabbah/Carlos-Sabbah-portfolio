@@ -25,9 +25,7 @@ body {
   background-color: black;
 }
 
-body,
-section,
-main {
+body {
   overflow-x: hidden;
 }
 
@@ -196,7 +194,7 @@ nav p {
   }
 
   nav a {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   header li {
@@ -233,6 +231,11 @@ nav p {
   nav.active {
     right: 0;
     transition: 0.5s all ease-in-out;
+  }
+
+  .me {
+    font-size: 21px !important;
+    margin-bottom: 35px;
   }
 
   nav a {
@@ -287,7 +290,7 @@ nav p {
     height: 50px;
     border-radius: 5px;
     background-color: white;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
     transition: 0.3s all ease-in-out;
   }
 
@@ -551,10 +554,6 @@ instead as it is cleaner and matches the overall style of the website. */
     cursor: default;
     font-size: 80px;
   }
-
-  header a {
-    height: 21px;
-  }
 }
 
 @media (max-width: 750px) {
@@ -784,7 +783,6 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
   #personal-creatives,
   #webdev-projects {
     width: 900px;
-    overflow-x: hidden;
   }
 
   .creative-container h1 {

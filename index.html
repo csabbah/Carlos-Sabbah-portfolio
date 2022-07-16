@@ -31,22 +31,28 @@
       <i id="nav-stack" class="fa-solid fa-bars"></i>
       <nav>
         <!-- No href was added for nav anchor tags because the scroll function is being handled in script.js -->
-        <a id="nav-carlos" class="animation-navLinkFade">Carlos Sabbah</a>
+        <a class="nav-item top me" class="animation-navLinkFade"
+          >Carlos Sabbah</a
+        >
         <ul class="animation-navLIFade">
           <li>
-            <a id="nav-what-i-do">What i do</a>
+            <a class="nav-item landing-secondary">What i do</a>
           </li>
           <p>/</p>
           <li>
-            <a id="nav-personal">Creative Projects</a>
+            <a class="nav-item creatives-top mobile-creatives-top"
+              >Creative Projects</a
+            >
           </li>
           <p>/</p>
           <li>
-            <a id="nav-webdev">Web Dev projects</a>
+            <a class="nav-item webdev-top mobile-webdev-top"
+              >Web Dev projects</a
+            >
           </li>
           <p>/</p>
-          <li id="nav-form" style="margin-right: 0">
-            <a>Contact me</a>
+          <li style="margin-right: 0">
+            <a class="nav-item contact-form">Contact me</a>
           </li>
         </ul>
       </nav>
@@ -135,6 +141,7 @@
     <section id="personal-creatives">
       <div class="creative-container">
         <h1>SOME OF THE CREATIVE PROJECTS I WORKED ON.</h1>
+        <div id="creatives-top"></div>
         <div class="creatives1">
           <div class="banners">
             <img
@@ -177,6 +184,7 @@
             alt="Image of a girl holding a phone with video game characters jumping out the phone"
           />
         </div>
+        <div id="mobile-creatives-top"></div>
         <div class="creatives2">
           <video style="margin-left: 0" controls>
             <source
@@ -263,6 +271,7 @@
         <h1 id="brand-title">
           SOME OF THE APPLICATIONS I DEVELOPED & DEPLOYED.
         </h1>
+        <div id="webdev-top"></div>
         <div class="webdev-projs">
           <a
             target="_blank"
@@ -297,6 +306,7 @@
             />
             <p>MVC Petters Social</p>
           </a>
+          <div id="mobile-webdev-top"></div>
           <a
             target="_blank"
             rel="noreferrer noopener"
@@ -308,6 +318,7 @@
             />
             <p>MVC Tech blog</p>
           </a>
+
           <a
             target="_blank"
             rel="noreferrer noopener"
