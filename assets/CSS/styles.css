@@ -783,6 +783,7 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
   #personal-creatives,
   #webdev-projects {
     width: 900px;
+    overflow-x: hidden;
   }
 
   .creative-container h1 {
@@ -831,6 +832,7 @@ Subtle transition across the Y axis along with increase to 100% in opacity */
   #personal-creatives,
   #webdev-projects {
     width: 330px;
+    overflow-x: hidden;
   }
 }
 
